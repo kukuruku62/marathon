@@ -26,7 +26,7 @@ export const Timer = () => {
       const differenceOfTime = countdownDate - currentTime;
 
       const days = Math.floor(differenceOfTime / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((differenceOfTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const hours =   setDataLength(Math.floor((differenceOfTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
       const minutes = setDataLength(Math.floor((differenceOfTime % (1000 * 60 * 60)) / (1000 * 60)));
       const seconds = setDataLength(Math.floor((differenceOfTime % (1000 * 60)) / 1000));
 
