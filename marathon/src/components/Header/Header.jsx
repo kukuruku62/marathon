@@ -8,7 +8,7 @@ export const Header = () => {
       <div className={styles.headerWrapper}>
         <div className={styles.headerInner}>
           <img className={styles.flag} src="../src/assets/img/flag.svg" alt="Flag" />
-          <h1 className={styles.headerTitle}>STUPAVA MARATHON</h1>
+          <h2 className={styles.headerTitle}>STUPAVA MARATHON</h2>
           <Timer />
         </div>
       </div>

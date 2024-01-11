@@ -1,11 +1,16 @@
 import React, { useEffect, useState, useRef } from "react";
 import styles from "./Timer.module.scss";
+import { useSelector } from "react-redux";
+
 
 export const Timer = () => {
+  const timeOfStartFirstEvent = useSelector((state)=> state.events.startFirstEvent)
+  // console.log(timeOfStartFirstEvent)
   const [timerDays, setTimerDays] = useState("00");
   const [timerHours, setTimerHours] = useState("00");
   const [timerMinutes, setTimerMinutes] = useState("00");
-  const [timerSeconds, setTimerSeconds] = useState("00");
+  // const [timerSeconds, setTimerSeconds] = useState("00");
+  // console.log(new Date(timeOfStartFirstEvent), new Date(timeOfStartFirstEvent).getDay())
 
   let interval = useRef();
 
@@ -18,7 +23,7 @@ export const Timer = () => {
   }
 
   const startTimer = () => {
-    const countdownDate = new Date("January 20, 2024 11:30:00").getTime();
+    const countdownDate = new Date(timeOfStartFirstEvent).getTime();
     // console.log(new Date("January 20, 2024 11:30:00"))
 
     interval = setTimeout(() => {
@@ -28,7 +33,7 @@ export const Timer = () => {
       const days = Math.floor(differenceOfTime / (1000 * 60 * 60 * 24));
       const hours =   setDataLength(Math.floor((differenceOfTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
       const minutes = setDataLength(Math.floor((differenceOfTime % (1000 * 60 * 60)) / (1000 * 60)));
-      const seconds = setDataLength(Math.floor((differenceOfTime % (1000 * 60)) / 1000));
+      // const seconds = setDataLength(Math.floor((differenceOfTime % (1000 * 60)) / 1000));
 
       if (differenceOfTime < 0) {
         clearInterval(interval.current);
@@ -36,7 +41,7 @@ export const Timer = () => {
         setTimerDays(days);
         setTimerHours(hours);
         setTimerMinutes(minutes);
-        setTimerSeconds(seconds);
+        // setTimerSeconds(seconds);
       }
     }, 1000);
   };
@@ -71,14 +76,14 @@ export const Timer = () => {
         <span className={styles.timerText}>minutes</span>
         <span className={styles.timerData}>{timerMinutes}</span>
       </div>
-      <div className={styles.separator}>
+      {/* <div className={styles.separator}>
         <span>.</span>
         <span>.</span>
       </div>
       <div className={styles.timerUnitWrapper}>
         <span className={styles.timerText}>seconds</span>
         <span className={styles.timerData}>{timerSeconds}</span>
-      </div>
+      </div> */}
     </div>
   );
 };

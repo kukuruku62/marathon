@@ -1,0 +1,157 @@
+[
+  {
+    "place": "NO DISPLAY / TEST",
+    "variant": "",
+    "type": "NO DISPLAY / TEST",
+    "date": "2023-01-20",
+    "time": "11:30",
+    "length": ["10"],
+    "height difference": "170",
+    "start point": "Stupava, Penzión INTENZÍVA - BAJKSERVIS (Nová ulica 66)"
+  },
+  {
+    "place": "Stupava",
+    "variant": "",
+    "type": "RUN",
+    "date": "2024-01-20",
+    "time": "09:30",
+    "length": ["10", "25"],
+    "measurement": "km",
+    "height difference": "170",
+    "start point": "Stupava, Penzión INTENZÍVA - BAJKSERVIS (Nová ulica 66)"
+  },
+  {
+    "place": "Stupava",
+    "variant": "",
+    "type": "MTB",
+    "date": "2024-01-20",
+    "time": "11:30",
+    "length": ["25"],
+    "measurement": "km",
+    "height difference": "500",
+    "start point": "Stupava, Penzión INTENZÍVA - BAJKSERVIS (Nová ulica 66)"
+  },
+
+  {
+    "place": "Stupava",
+    "variant": "",
+    "type": "MTB",
+    "date": "2024-09-14",
+    "time": "09:00",
+    "length": ["25", "42", "78"],
+    "measurement": "km",
+    "height difference": "500",
+    "start point": "Stupava, Penzión INTENZÍVA - BAJKSERVIS (Nová ulica 66)"
+  },
+
+  {
+    "place": "Bystrica",
+    "variant": "",
+    "type": "RUN",
+    "date": "2024-09-15",
+    "time": "09:30",
+    "length": ["11"],
+    "measurement": "km",
+    "height difference": "220",
+    "start point": "Stupava, Penzión INTENZÍVA - BAJKSERVIS (Nová ulica 66)"
+  },
+
+  {
+    "place": "Stupava",
+    "variant": "KOMBINÁCIA",
+    "type": "MTB & RUN",
+    "date": "2024-09-15",
+    "time": "08:45",
+    "length": ["11"],
+    "measurement": "km",
+    "height difference": "220",
+    "start point": "Stupava, Penzión INTENZÍVA - BAJKSERVIS (Nová ulica 66)"
+  },
+  {
+    "place": "Stupava",
+    "variant": "ŠKODA FAMILY",
+    "type": "MTB",
+    "date": "2024-09-15",
+    "time": "12:00",
+    "length": ["7"],
+    "measurement": "km",
+    "height difference": "220",
+    "start point": "Stupava, Penzión INTENZÍVA - BAJKSERVIS (Nová ulica 66)"
+  },
+  {
+    "place": "Stupava",
+    "variant": "JUNIOR",
+    "type": "MTB",
+    "date": "2024-09-15",
+    "time": "13:00",
+    "length": ["1.6", "3.2", "4.8"],
+    "measurement": "km",
+    "height difference": "220",
+    "start point": "Stupava, Penzión INTENZÍVA - BAJKSERVIS (Nová ulica 66)"
+  },
+  {
+    "place": "Stupava",
+    "variant": "Detský cyklomaratónik",
+    "type": "MTB",
+    "date": "2024-09-15",
+    "time": "13:00",
+    "length": ["100", "400", "800", "1200"],
+    "measurement": "m",
+    "height difference": "220",
+    "start point": "Stupava, Penzión INTENZÍVA - BAJKSERVIS (Nová ulica 66)"
+  },
+  {
+    "place": "Stupava",
+    "date": "2024-01-20",
+    "events": {
+      "RUN": {
+        "10": "11:00",
+        "25": "11:00"
+      },
+      "MTB": {
+        "25": "11:30"
+      }
+    }
+  },
+  {
+    "place": "Stupava",
+    "date": "2024-09-14",
+    "events": {
+      "MTB": {
+        "25": "10:30",
+        "42": "10:00",
+        "78": "09:00"
+      }
+    }
+  },
+  {
+    "place": "Záhorska Bystrica",
+    "date": "2024-09-15",
+    "events": {
+      "RUN": {
+        "11": "09:30"
+      }
+    }
+  },
+  {
+    "place": "Záhorska Bystrica",
+    "date": "2024-09-14",
+    "events": {
+      "KOMBINÁCIA MTB & RUN": {
+        "11": "09:30"
+      }
+    }
+  },
+  {
+    "place": "Stupava",
+    "date": "2024-09-15",
+    "events": {
+      "ŠKODA FAMILY MTB": {
+        "7": "12:00"
+      },
+      "JUNIOR MTB": {
+        "7": "12:00"
+      }
+    }
+  }
+]
