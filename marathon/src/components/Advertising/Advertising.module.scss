@@ -1,0 +1,28 @@
+.wrapper {
+  max-width: 1440px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(auto-fit, 1fr);
+  align-items: center;
+  justify-items: center;
+  padding: 20px 0;
+}
+
+.img {
+  width: 180px;
+  // height: 300px;
+  // background-color: #b51616;
+}
+
+.title {
+  font-size: 56px;
+  font-weight: 700;
+  text-align: center;
+  margin: 10px auto;
+  color: rgba(52, 77, 129, 0.863);
+}

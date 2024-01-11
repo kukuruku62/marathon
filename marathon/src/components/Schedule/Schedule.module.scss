@@ -1,7 +1,7 @@
-.schedule {
-  // background-color: #144362;
-  // z-index: -1000;
-}
+// .schedule {
+//   // background-color: #144362;
+//   // z-index: -1000;
+// }
 
 .grid {
   display: grid;
@@ -101,6 +101,7 @@
   align-items: center;
   margin: 0 auto;
   z-index: 5;
+  cursor: pointer;
 }
 
 .title {
