@@ -1,36 +1,24 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./Schedule.module.scss";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchSchedule } from "../../store/slices";
 import { Skeleton } from "../Skeleton/Skeleton";
 
-export const Schedule = () => {
-  const dispatch = useDispatch();
-  const status = useSelector((state) => state.events.status);
-  const errorMessage = useSelector((state) => state.events.errorMessage);
-  const events = useSelector((state) => state.events.events);
-  // const eventsDate = events.date;
-
-  useEffect(() => {
-    dispatch(fetchSchedule());
-    // console.log(events.date)
-  }, [dispatch]);
+export const Schedule = ({statusOfFetch, listOfEvents}) => {
 
   return (
     <section className={styles.schedule}>
-      <h2>Schedule</h2>
-      {status === "loading" && <Skeleton />}
-      {status === "rejected" && errorMessage ? <h2>Error: {errorMessage}</h2> : null}
-      {status === "resolved" && !events.length && <h2>There is no any events yet</h2>}
-      {status === "resolved" && events.length ? (
+      <h2 className={styles.title}>Schedule</h2>
+      {statusOfFetch === "loading" && <Skeleton message={"Loading..."}/>}
+      {statusOfFetch === "rejected" && errorMessage ? <Skeleton message={'An error that we are already working on eliminating. Come back a little later'}/> : null}
+      {statusOfFetch === "resolved" && !listOfEvents.length && <Skeleton message={"There is no any events yet"}/>}
+      {statusOfFetch === "resolved" && listOfEvents.length ? (
         <ol className={styles.grid}>
-          {events.map((event, index) => (
+          {listOfEvents.map((event, index) => (
             <li key={index} className={styles.gridItem}>
               <article className={styles.content}>
-                <div className={styles.eventTitles}>
-                  <h3 className={styles.title}>{event.place}</h3>
-                  <h3 className={styles.title}>{event.variant}</h3>
-                  <h3 className={styles.title}>{event.type}</h3>
+                <div className={styles.subtitlesWrapper}>
+                  <h3 className={styles.subtitle}>{event.place}</h3>
+                  <h3 className={styles.subtitle}>{event.variant}</h3>
+                  <h3 className={styles.subtitle}>{event.type}</h3>
                 </div>
                 <div className={styles.distanceContainer}>
                   {event.length.map((el, index) => (

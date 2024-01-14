@@ -19,7 +19,9 @@ const eventsSlice = createSlice({
   name: "events",
   initialState: {
     events: [],
+    firstEvent: null,
     startFirstEvent: null,
+    dateOfNextEvent: null,
     status: null,
     errorMessage: null,
   },
@@ -36,6 +38,9 @@ const eventsSlice = createSlice({
           .filter((elem) => Date.parse(elem.date + " " + elem.time) >= Date.now())
           .sort(sortArrayOfEventsByDateAndTime);
         state.startFirstEvent = state.events[0].date + " " + state.events[0].time;
+        state.dateOfNextEvent = state.events[0].date;
+        state.firstEvent = state.events[0];
+
       })
       .addCase(fetchSchedule.rejected, (state, action) => {
         state.status = "rejected";

@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./Skeleton.module.css";
 
-export const Skeleton = () => {
+export const Skeleton = ({message}) => {
   return (
     <div className={styles.skeleton}>
-      <span>Loading...</span>
+      <span>{message}</span>
     </div>
   );
 };

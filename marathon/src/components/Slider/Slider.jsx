@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "./Slider.module.scss";
 
-export const Slider = () => {
+export const Slider = ({seasonOfNextEvent, dateOfNextEvent}) => {
   return (
     <section className={styles.slider}>
       <div className={styles.wrapper}>
         <div className={styles.textContainer}>
-          <h2 className={styles.subtitle}>Ближайший старт: 20.01.2024</h2>
-          <h1 className={styles.title}>STUPAVA WINTER MARATÓN MTB & RUN 24.01.2024</h1>
+          {/* <h2 className={styles.subtitle}>Ближайший старт: 20.01.2024</h2> */}
+          <h1 className={styles.title}>STUPAVA {dateOfNextEvent} {seasonOfNextEvent} MTB & RUN MARATÓN </h1>
           <p className={styles.description}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores sequi, expedita neque
             quod consequatur minima voluptas impedit obcaecati veritatis, reprehenderit dolorem
