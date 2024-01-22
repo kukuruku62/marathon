@@ -1,42 +1,30 @@
-import { Routes, Route, Link } from "react-router-dom";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchSchedule } from "./store/slices.js";
-
-import {useDateEvents} from "./components/useDateEvents.js";
-import { Schedule } from "./components/Schedule/Schedule.jsx";
-import { Footer } from "./components/Footer/Footer.jsx";
-import { Header } from "./components/Header/Header.jsx";
-import { Slider } from "./components/Slider/Slider.jsx";
-import { Advertising } from "./components/Advertising/Advertising.jsx";
-
-
+// import { Home } from "./pages/Home.jsx";
+import { Event } from "./pages/Event.jsx";
+// import {} from "react-error-boundary" // УДАЛИТЬ ЭРОР БОУНДАРИ, ЕСЛИ НЕ НУЖЕН
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Outlet,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
 import "./index.css";
+import { Home } from "./pages/Home.jsx";
+import { Layout } from "./components/Layout/Layout.jsx";
+import { ErrorPage } from "./pages/ErrorPage/ErrorPage.jsx";
+import { SingleEvent } from "./pages/SingleEvent/SingleEvent.jsx";
 
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Layout />} errorElement={<ErrorPage />}>
+      <Route index element={<Home />} />
+      {/* <Route path="event" element={<Event />} /> */}
+      <Route path="event/:id" element={<SingleEvent />} />
+    </Route>
+  )
+);
 
-
-
-function App() {
-  const dispatch = useDispatch();
-  const dateOfNextEvent = useSelector((state) => state.events.dateOfNextEvent);
-  const statusOfFetch = useSelector((state) => state.events.status);
-  // const errorMessage = useSelector((state) => state.events.errorMessage);
-  const listOfEvents = useSelector((state) => state.events.events);
-  const {transformFormatOfDate, renderSeasonOfEvent} = useDateEvents();
-
-    useEffect(() => {
-      dispatch(fetchSchedule());
-    }, [dispatch]);
-
-  return (
-    <>
-      <Header />
-      <Slider seasonOfNextEvent={renderSeasonOfEvent(dateOfNextEvent)} dateOfNextEvent={transformFormatOfDate(dateOfNextEvent)}/>
-      <Schedule statusOfFetch={statusOfFetch} listOfEvents={listOfEvents}/>
-      <Advertising />
-      <Footer />
-    </>
-  );
-}
-
-export default App;
+export const App = () => {
+  // return <Home />;
+  return <RouterProvider router={router} />;
+};

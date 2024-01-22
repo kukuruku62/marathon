@@ -1,19 +1,54 @@
 [
   {
-    "place": "NO DISPLAY / TEST",
+    "id": 0,
+    "name": "STUPAVA RUN MARATHON",
+    "place": "STUPAVA",
     "variant": "",
-    "type": "NO DISPLAY / TEST",
-    "date": "2023-01-20",
+    "type": "RUN",
+    "date": "2024-01-25",
+    "addDate": "Additional information in the form of a line/ whole paragraph can be located here...",
     "time": "11:30",
+    "addTime": "Additional information in the form of a line/ whole paragraph can be located here...",
     "length": ["10"],
     "height difference": "170",
-    "start point": "Stupava, Penzión INTENZÍVA - BAJKSERVIS (Nová ulica 66)"
+    "start point": "Stupava, Penzión INTENZÍVA - BAJKSERVIS (Nová ulica 66)",
+    "sponsors": "Skoda",
+    "registration": ["zdcsdsdfsdsdfsd 09.12.26", "sdsfdefefe - fdgdf - 342"],
+    "addRegistration": "Additional information in the form of a line field for it has not been filled in, it will not be displayed.",
+    "presentation": [
+      "od 15. do 19.1 2024 v priestoroch bicyklového obchodu BAJKSERVIS (Nová 66) počas otváracích hodín 12:00-18.00)",
+      "20.1. 2024 v priestoroch penziónu Intenzíva od 9:00-10.45"
+    ],
+    "addPresentation": "Additional information in the form of a line field for it has not been filled in, it will not be displayed.",
+    "payments": {
+      "till 31.12.2023": "17",
+      "from 01.01.2024 to 29.02.2024": "27",
+      "from 01.01.2024 to 29.02.2025 ": "37"
+    },
+    "addPayments": "Additional Information. Can be specified if necessary.",
+    "categories": {
+      "ženy": {
+        "A": "do 29 rokov",
+        "B": "30 - 39 rokov",
+        "C": "40+ rokov"
+      },
+      "muži": {
+        "D": "do 18 rokov",
+        "E": "19 - 29 rokov",
+        "F": "30 - 39 rokov",
+        "G": "40 - 49 rokov",
+        "H": "50+ rokov"
+      }
+    },
+    "addCategories": "Additional information in the form of a line/ whole paragraph can be located here. If the field for it has not been filled in, it will not be displayed."
   },
   {
+    "id": 1,
+    "name": "STUPAVA RUN MARATHON",
     "place": "Stupava",
     "variant": "",
     "type": "RUN",
-    "date": "2024-01-20",
+    "date": "2024-01-27",
     "time": "09:30",
     "length": ["10", "25"],
     "measurement": "km",
@@ -21,10 +56,12 @@
     "start point": "Stupava, Penzión INTENZÍVA - BAJKSERVIS (Nová ulica 66)"
   },
   {
+    "id": 2,
+    "name": "STUPAVA MTB MARATHON",
     "place": "Stupava",
     "variant": "",
     "type": "MTB",
-    "date": "2024-01-20",
+    "date": "2024-01-27",
     "time": "11:30",
     "length": ["25"],
     "measurement": "km",
@@ -33,6 +70,8 @@
   },
 
   {
+    "id": 3,
+    "name": "STUPAVA MTB MARATHON",
     "place": "Stupava",
     "variant": "",
     "type": "MTB",
@@ -45,6 +84,8 @@
   },
 
   {
+    "id": 4,
+    "name": "BYSTRICA MTB MARATHON",
     "place": "Bystrica",
     "variant": "",
     "type": "RUN",
@@ -57,6 +98,8 @@
   },
 
   {
+    "id": 5,
+    "name": "STUPAVA KOMBINÁCIA MTB & RUN MARATHON",
     "place": "Stupava",
     "variant": "KOMBINÁCIA",
     "type": "MTB & RUN",
@@ -68,6 +111,7 @@
     "start point": "Stupava, Penzión INTENZÍVA - BAJKSERVIS (Nová ulica 66)"
   },
   {
+    "id": 6,
     "place": "Stupava",
     "variant": "ŠKODA FAMILY",
     "type": "MTB",
@@ -79,6 +123,7 @@
     "start point": "Stupava, Penzión INTENZÍVA - BAJKSERVIS (Nová ulica 66)"
   },
   {
+    "id": 7,
     "place": "Stupava",
     "variant": "JUNIOR",
     "type": "MTB",
@@ -90,6 +135,7 @@
     "start point": "Stupava, Penzión INTENZÍVA - BAJKSERVIS (Nová ulica 66)"
   },
   {
+    "id": 8,
     "place": "Stupava",
     "variant": "Detský cyklomaratónik",
     "type": "MTB",

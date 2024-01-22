@@ -1,11 +1,16 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { sortArrayOfEventsByDateAndTime } from "./sortfunc.js";
+import { sortArrayOfEventsByDateAndTime } from "../helpers/sortArrayByParams.js";
 
 export const fetchSchedule = createAsyncThunk(
   "events/fetchSchedule",
-  async function (_, { rejectWithValue }) {
+  async function (id='', { rejectWithValue }) {
     try {
-      const response = await fetch("https://74ba3dbbf50fde17.mokky.dev/events");
+      // console.log(id)
+      const response = await fetch(`https://74ba3dbbf50fde17.mokky.dev/events/${id}`);
+
+      // if (!response.ok) {
+      //   throw new Error ('ssdfsde')
+      // }
 
       const data = await response.json();
       return data;
@@ -33,14 +38,21 @@ const eventsSlice = createSlice({
       })
       .addCase(fetchSchedule.fulfilled, (state, action) => {
         state.status = "resolved";
+        // console.log(action.payload)
+        if (Array.isArray(action.payload)) {
+            state.events = action.payload
+            .filter((elem) => Date.parse(elem.date + " " + elem.time) >= Date.now())
+            .sort(sortArrayOfEventsByDateAndTime);
+            console.log(state.events)
+          state.startFirstEvent = state.events[0].date + " " + state.events[0].time;
+          state.dateOfNextEvent = state.events[0].date;
+          state.firstEvent = state.events[0];
+        } else {
+          state.events = action.payload
+          // console.log('else', state.events)
+        }
         //filter fetched data by actual events and sort them by date and time
-        state.events = action.payload
-          .filter((elem) => Date.parse(elem.date + " " + elem.time) >= Date.now())
-          .sort(sortArrayOfEventsByDateAndTime);
-        state.startFirstEvent = state.events[0].date + " " + state.events[0].time;
-        state.dateOfNextEvent = state.events[0].date;
-        state.firstEvent = state.events[0];
-
+        
       })
       .addCase(fetchSchedule.rejected, (state, action) => {
         state.status = "rejected";

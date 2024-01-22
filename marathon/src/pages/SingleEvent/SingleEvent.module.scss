@@ -1,0 +1,106 @@
+.wrapper {
+  height: 100%;
+  max-width: 1440px;
+  padding: 0px 20px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 50px;
+}
+
+.titlesWrapper {
+  display: flex;
+  flex-direction: column;
+  // flex: 1;
+  align-self: center;
+  max-width: fit-content;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  font-style: italic;
+  color: rgba(39, 58, 98, 0.863);
+
+  @media (max-width: 850px) {
+    font-size: 50px;
+  }
+
+  @media (max-width: 650px) {
+    font-size: 42px;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 32px;
+  }
+}
+
+.subtitle {
+  font-size: 32px;
+  font-weight: 700;
+  font-style: italic;
+  color: rgba(39, 58, 98, 0.863);
+  align-self: flex-end;
+}
+
+.listItems {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  // padding: 0 100px;
+  // justify-content: flex-end;
+}
+
+.itemTitle {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.itemText {
+  font-size: 16px;
+  padding-left: 30px;
+  
+}
+
+.wrapperInfoBlock {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.wrapperListsCategory {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  // padding-left: 50px;
+}
+
+.listCategory {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  .genderCategory {
+    text-transform: capitalize;
+  }
+}
+
+// .addInfo {
+//   &:before {
+//     content: '*';
+//   }
+// }
+// .itemCategory {
+//   margin-top: 10px;
+// }
