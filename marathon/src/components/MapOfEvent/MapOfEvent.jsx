@@ -125,9 +125,13 @@ export const MapOfEvent = () => {
     ["48.279165", "17.050455"],
     ["48.278963", "17.048753"],
   ];
-  // console.log(a.map((el) => el.reverse().map((elem) => elem.toFixed(6))))
   return (
     <section className={styles.mapWrapper}>
+      {/* <div> */}
+        <h3 className={styles.title}>Route map</h3>
+        <p className={styles.description}>*Please note that the route may change if weather conditions worsen.</p>
+      {/* </div> */}
+
       <MapContainer
         center={[48.280325, 17.048564]}
         zoom={12}
@@ -139,14 +143,12 @@ export const MapOfEvent = () => {
         />
         <Marker position={[48.2798, 17.0483]}>
           <Tooltip>Nová 66, 900 31 Stupava Bajkservis Registration</Tooltip>
-        </Marker> 
-        <Marker style={"color: red"} position={[48.278966, 17.048793]}>
+        </Marker>
+        <Marker position={[48.278966, 17.048793]}>
           <Tooltip>Start / Finish</Tooltip>
         </Marker>
-        <Polyline positions={a} pathOptions={{color: "#A60000"}}/>
+        <Polyline positions={a} pathOptions={{ color: "#A60000" }} />
       </MapContainer>
     </section>
-
-
   );
 };
