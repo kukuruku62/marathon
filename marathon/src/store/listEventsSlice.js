@@ -24,6 +24,7 @@ const eventsSlice = createSlice({
   name: "events",
   initialState: {
     events: [],
+    listMainSponsors: [],
     firstEvent: null,
     startFirstEvent: null,
     dateOfNextEvent: null,
@@ -43,10 +44,11 @@ const eventsSlice = createSlice({
             state.events = action.payload
             .filter((elem) => Date.parse(elem.date + " " + elem.time) >= Date.now())
             .sort(sortArrayOfEventsByDateAndTime);
-            console.log(state.events)
           state.startFirstEvent = state.events[0].date + " " + state.events[0].time;
           state.dateOfNextEvent = state.events[0].date;
           state.firstEvent = state.events[0];
+          state.listMainSponsors = action.payload.filter((el) => el.mainSponsors).flatMap((elem) => elem.mainSponsors)
+          console.log(state.listMainSponsors)
         } else {
           state.events = action.payload
           // console.log('else', state.events)

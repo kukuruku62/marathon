@@ -8,8 +8,6 @@ import { Schedule } from '../components/Schedule/Schedule.jsx';
 import { Slider } from "../components/Slider/Slider.jsx";
 import { Advertising } from "../components/Advertising/Advertising.jsx";
 
-// import "./index.css";
-
 
 export const Home = () => {
   const dispatch = useDispatch();
@@ -17,6 +15,7 @@ export const Home = () => {
   const statusOfFetch = useSelector((state) => state.events.status);
   const errorMessage = useSelector((state) => state.events.errorMessage);
   const listOfEvents = useSelector((state) => state.events.events);
+  const listMainSponsors = useSelector((state) => state.events.listMainSponsors)
   const { transformFormatOfDate, renderSeasonOfEvent } = useDateEvents();
 
   useEffect(() => {
@@ -25,7 +24,6 @@ export const Home = () => {
 
   return (
     <>
-      {/* <Header /> */}
       <Slider
         seasonOfNextEvent={renderSeasonOfEvent(dateOfNextEvent)}
         dateOfNextEvent={transformFormatOfDate(dateOfNextEvent)}
@@ -35,8 +33,7 @@ export const Home = () => {
         listOfEvents={listOfEvents}
         errorMessage={errorMessage}
       />
-      <Advertising />
-      {/* <Footer /> */}
+      <Advertising listMainSponsors={listMainSponsors}/>
     </>
   );
 }

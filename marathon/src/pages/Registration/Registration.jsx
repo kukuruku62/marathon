@@ -135,7 +135,9 @@ export const Registration = () => {
             Žena
           </label>
           <div>
-            {errors?.gender && <p className={styles.textError}>{errors?.gender?.message || "Error!"}</p>}
+            {errors?.gender && (
+              <p className={styles.textError}>{errors?.gender?.message || "Error!"}</p>
+            )}
           </div>
         </div>
 

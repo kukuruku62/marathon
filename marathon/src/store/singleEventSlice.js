@@ -38,7 +38,7 @@ const singleEventSlice = createSlice({
       // state.categories = Object.values(action.payload.categories).map((elem) => Object.keys(elem))
       state.categories = action.payload.categories
       // state.addCategories = action.payload.addCategories
-      console.log(state.addCategories)
+      console.log(action.payload.sponsors)
     })
   }
 });

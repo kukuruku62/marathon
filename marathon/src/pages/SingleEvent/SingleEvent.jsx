@@ -11,7 +11,6 @@ export const SingleEvent = () => {
   const categories = useSelector((state) => state.event.categories);
   const { id } = useParams();
   const dispatch = useDispatch();
-  console.log(event.addCategories);
 
   const ListCategories = ({ keyCategory, valuesCategory }) => (
     <ul className={styles.listCategory}>
@@ -30,12 +29,25 @@ export const SingleEvent = () => {
     dispatch(fetchSingleEvent(id));
   }, [id]);
   //ПРОВЕРИТЬ ЕСЛИ ДАННЫЕ БУДУТ ПУСТЫМИ
+  
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
-        <div className={styles.titlesWrapper}>
           <h2 className={styles.title}>{event.name}</h2>
-          <h3 className={styles.subtitle}>{event.date}</h3>
+    
+
+        <div className={styles.wrapperSponsors}>
+          <h2 className={styles.titleAdv}>Sponsors and partners:</h2>
+          <ul className={styles.advertising}>
+            {event.sponsors &&
+              event.sponsors.map(({ linkSite, linkImage }, index) => (
+                <li key={index}>
+                  <a href={linkSite} target="_blank">
+                    <img className={styles.sponsorImg} src={linkImage} />
+                  </a>
+                </li>
+              ))}
+          </ul>
         </div>
 
         <ul className={styles.listItems}>
@@ -80,10 +92,9 @@ export const SingleEvent = () => {
           <li className={styles.item}>
             <h4 className={styles.itemTitle}>Price:</h4>
             <div className={styles.wrapperInfoBlock}>
-              {event.payments &&
-                Object.entries(event.payments).map(([date, price]) => (
-                  <p className={styles.itemText}>{`${date}: ${price + "€"}`}</p>
-                ))}
+              {event.payments && event.payments.map((price, index) => (
+                <p  key={index} className={styles.itemText}>{price}</p>
+              ))}
               {event.addPayments ? (
                 <p className={styles.itemText}>{`* ${event.addPayments}`}</p>
               ) : null}
@@ -91,17 +102,27 @@ export const SingleEvent = () => {
           </li>
           <li className={styles.item}>
             <h4 className={styles.itemTitle}>Registration:</h4>
-            {event.registration && event.registration.map((elem) => (
-              <p className={styles.itemText}>{elem}</p>
-            ))}
-            {event.addRegistration ? <p className={styles.itemText}>{`* ${event.addRegistration}`}</p> : null}
+            {event.registration &&
+              event.registration.map((elem, index) => (
+                <p key={index} className={styles.itemText}>
+                  {elem}
+                </p>
+              ))}
+            {event.addRegistration ? (
+              <p className={styles.itemText}>{`* ${event.addRegistration}`}</p>
+            ) : null}
           </li>
           <li className={styles.item}>
             <h4 className={styles.itemTitle}>Presentation:</h4>
-            {event.presentation && event.presentation.map((elem) => (
-              <p className={styles.itemText}>{elem}</p>
-            ))}
-            {event.addPresentation ? <p className={styles.itemText}>{`* ${event.addPresentation}`}</p> : null}
+            {event.presentation &&
+              event.presentation.map((elem, index) => (
+                <p key={index} className={styles.itemText}>
+                  {elem}
+                </p>
+              ))}
+            {event.addPresentation ? (
+              <p className={styles.itemText}>{`* ${event.addPresentation}`}</p>
+            ) : null}
           </li>
         </ul>
       </div>

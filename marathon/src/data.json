@@ -1,18 +1,59 @@
 [
   {
+    "mainSponsors": [ 
+      {
+        "linkSite": "https://bratislavskykraj.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53481657622_ab27baf742_m.jpg"
+      },
+      {
+        "linkSite": "https://www.stupava.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53483032603_ca0e1f3398_m.jpg"
+      },
+      {
+        "linkSite": "https://bajkservis.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53482891111_4f10b4ae3c_m.jpg"
+      },
+      {
+        "linkSite": "https://www.faxcopy.sk/",
+        "linkImage": "https://live.staticflickr.com/65535/53484186791_5753c7de1f_m.jpg"
+      },
+      {
+        "linkSite": "https://www.skoda-auto.sk/",
+        "linkImage": "https://live.staticflickr.com/65535/53484347996_26c8066e92_k.jpg"
+      }
+    ]
+  },
+  {
     "id": 0,
     "name": "STUPAVA RUN MARATHON",
     "place": "STUPAVA",
     "variant": "",
     "type": "RUN",
     "date": "2024-01-25",
+    "sponsors": [
+      {
+        "linkSite": "https://bratislavskykraj.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53481657622_ab27baf742_m.jpg"
+      },
+      {
+        "linkSite": "https://www.stupava.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53483032603_ca0e1f3398_m.jpg"
+      },
+      {
+        "linkSite": "https://bajkservis.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53482891111_4f10b4ae3c_m.jpg"
+      },
+      {
+        "linkSite": "https://www.faxcopy.sk/",
+        "linkImage": "https://live.staticflickr.com/65535/53484186791_5753c7de1f_m.jpg"
+      }
+    ],
     "addDate": "Additional information in the form of a line/ whole paragraph can be located here...",
     "time": "11:30",
     "addTime": "Additional information in the form of a line/ whole paragraph can be located here...",
     "length": ["10"],
     "height difference": "170",
     "start point": "Stupava, Penzión INTENZÍVA - BAJKSERVIS (Nová ulica 66)",
-    "sponsors": "Skoda",
     "registration": ["zdcsdsdfsdsdfsd 09.12.26", "sdsfdefefe - fdgdf - 342"],
     "addRegistration": "Additional information in the form of a line field for it has not been filled in, it will not be displayed.",
     "presentation": [
@@ -20,11 +61,11 @@
       "20.1. 2024 v priestoroch penziónu Intenzíva od 9:00-10.45"
     ],
     "addPresentation": "Additional information in the form of a line field for it has not been filled in, it will not be displayed.",
-    "payments": {
-      "till 31.12.2023": "17",
-      "from 01.01.2024 to 29.02.2024": "27",
-      "from 01.01.2024 to 29.02.2025 ": "37"
-    },
+    "payments": [
+      "till 31.12.2023: 17€",
+      "from 01.01.2024 to 29.02.2024: 27€",
+      "from 01.01.2024 to 29.02.2025: 37€"
+    ],
     "addPayments": "Additional Information. Can be specified if necessary.",
     "categories": {
       "ženy": {
