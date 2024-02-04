@@ -2,15 +2,11 @@ import React, { useEffect, useState, useRef } from "react";
 import styles from "./Timer.module.scss";
 import { useSelector } from "react-redux";
 
-
-export const Timer = () => {
-  const timeOfStartFirstEvent = useSelector((state)=> state.events.startFirstEvent)
-  // console.log(timeOfStartFirstEvent)
-  const [timerDays, setTimerDays] = useState("00");
-  const [timerHours, setTimerHours] = useState("00");
-  const [timerMinutes, setTimerMinutes] = useState("00");
-  // const [timerSeconds, setTimerSeconds] = useState("00");
-  // console.log(new Date(timeOfStartFirstEvent), new Date(timeOfStartFirstEvent).getDay())
+export const Timer = ({ timeOfStartFirstEvent }) => {
+  const [isComplete, setIsComplete] = useState(false);
+  const [timerDays, setTimerDays] = useState(false);
+  const [timerHours, setTimerHours] = useState(false);
+  const [timerMinutes, setTimerMinutes] = useState(false);
 
   let interval = useRef();
 
@@ -24,16 +20,18 @@ export const Timer = () => {
 
   const startTimer = () => {
     const countdownDate = new Date(timeOfStartFirstEvent).getTime();
-    // console.log(new Date("January 20, 2024 11:30:00"))
 
     interval = setTimeout(() => {
       const currentTime = new Date().getTime();
       const differenceOfTime = countdownDate - currentTime;
 
       const days = setDataLength(Math.floor(differenceOfTime / (1000 * 60 * 60 * 24)));
-      const hours =   setDataLength(Math.floor((differenceOfTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
-      const minutes = setDataLength(Math.floor((differenceOfTime % (1000 * 60 * 60)) / (1000 * 60)));
-      // const seconds = setDataLength(Math.floor((differenceOfTime % (1000 * 60)) / 1000));
+      const hours = setDataLength(
+        Math.floor((differenceOfTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+      );
+      const minutes = setDataLength(
+        Math.floor((differenceOfTime % (1000 * 60 * 60)) / (1000 * 60))
+      );
 
       if (differenceOfTime < 0) {
         clearInterval(interval.current);
@@ -41,7 +39,7 @@ export const Timer = () => {
         setTimerDays(days);
         setTimerHours(hours);
         setTimerMinutes(minutes);
-        // setTimerSeconds(seconds);
+        setIsComplete(true);
       }
     }, 1000);
   };
@@ -54,36 +52,26 @@ export const Timer = () => {
   });
 
   return (
-    <div className={styles.timer}>
-      <div className={styles.timerUnitWrapper}>
-        <span className={styles.timerText}>days</span>
-        <span className={styles.timerData}>{timerDays}</span>
-      </div>
-      <div className={styles.separator}>
-        <span>.</span>
-        <span>.</span>
-      </div>
-
-      <div className={styles.timerUnitWrapper}>
-        <span className={styles.timerText}>hours</span>
-        <span className={styles.timerData}>{timerHours}</span>
-      </div>
-      <div className={styles.separator}>
-        <span>.</span>
-        <span>.</span>
-      </div>
-      <div className={styles.timerUnitWrapper}>
-        <span className={styles.timerText}>minutes</span>
-        <span className={styles.timerData}>{timerMinutes}</span>
-      </div>
-      {/* <div className={styles.separator}>
-        <span>.</span>
-        <span>.</span>
-      </div>
-      <div className={styles.timerUnitWrapper}>
-        <span className={styles.timerText}>seconds</span>
-        <span className={styles.timerData}>{timerSeconds}</span>
-      </div> */}
+    <div className={styles.wrapper}>
+      {isComplete && (
+        <>
+          <h3 className={styles.title}>Next start:</h3>
+          <div className={styles.timerContainer}>
+            <div className={styles.timerUnitWrapper}>
+              <span className={styles.timerData}>{timerDays}</span>
+              <span className={styles.timerText}>days</span>
+            </div>
+            <div className={styles.timerUnitWrapper}>
+              <span className={styles.timerData}>{timerHours}</span>
+              <span className={styles.timerText}>hours</span>
+            </div>
+            <div className={styles.timerUnitWrapper}>
+              <span className={styles.timerData}>{timerMinutes}</span>
+              <span className={styles.timerText}>minutes</span>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 };

@@ -1,9 +1,20 @@
-.timer {
+.wrapper {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  color: white;
-  column-gap: 10px;
+  color: rgb(255, 255, 255);
+  background: rgb(238, 28, 37) 90%;
+  height: 80px;
+}
+
+.title {
+  letter-spacing: 1.5px;
+}
+
+.timerContainer {
+  display: flex;
+  flex-direction: row;
 }
 
 .timerUnitWrapper {
@@ -13,24 +24,21 @@
 }
 
 .timerText {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   font-family: Roboto;
 }
 
 .timerData {
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 700;
   font-family: Roboto;
+  line-height: 32px;
 }
 
-.separator {
-  display: flex;
-  flex-direction: column;
-
-  span {
-    margin: 0;
-    padding: 0;
-    height: 12px;
-  }
+.timerContainer .timerUnitWrapper:nth-child(-n + 2) .timerData:after {
+  content: ":";
+  // letter-spacing: 10px;
+  // margin-left: 5px;
+  // padding: 0 3px;
 }
