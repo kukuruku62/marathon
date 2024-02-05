@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
 import styles from "./Timer.module.scss";
 
-export const Timer = ({ timeOfStartFirstEvent }) => {
-  const [isComplete, setIsComplete] = useState(false);
-  const [timerDays, setTimerDays] = useState(false);
-  const [timerHours, setTimerHours] = useState(false);
-  const [timerMinutes, setTimerMinutes] = useState(false);
+export const Timer = ({ dateAndTimeFirstEvent }) => {
+  const [isReady, setIsReady] = useState(false);
+  const [timerDays, setTimerDays] = useState("00");
+  const [timerHours, setTimerHours] = useState("00");
+  const [timerMinutes, setTimerMinutes] = useState("00");
 
   let interval = useRef();
 
@@ -18,7 +18,7 @@ export const Timer = ({ timeOfStartFirstEvent }) => {
   }
 
   const startTimer = () => {
-    const countdownDate = new Date(timeOfStartFirstEvent).getTime();
+    const countdownDate = new Date(dateAndTimeFirstEvent).getTime();
 
     interval = setTimeout(() => {
       const currentTime = new Date().getTime();
@@ -38,7 +38,7 @@ export const Timer = ({ timeOfStartFirstEvent }) => {
         setTimerDays(days);
         setTimerHours(hours);
         setTimerMinutes(minutes);
-        setIsComplete(true);
+        setIsReady(true);
       }
     }, 1000);
   };
@@ -52,7 +52,7 @@ export const Timer = ({ timeOfStartFirstEvent }) => {
 
   return (
     <div className={styles.wrapper}>
-      {isComplete && (
+      {isReady && (
         <>
           <h3 className={styles.title}>ĎALŠÍ ŠTART</h3>
           <div className={styles.timerContainer}>
