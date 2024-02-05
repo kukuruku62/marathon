@@ -9,19 +9,24 @@
 }
 
 .title {
-  letter-spacing: 1.5px;
+  letter-spacing: 10px;
   font-weight: 400;
+  font-style: italic;
+  opacity: 85%;
 }
 
 .timerContainer {
   display: flex;
   flex-direction: row;
+  column-gap: 30px;
+  opacity: 85%;
 }
 
 .timerUnitWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+ 
 }
 
 .timerText {
@@ -37,9 +42,9 @@
   line-height: 32px;
 }
 
-.timerContainer .timerUnitWrapper:nth-child(-n + 2) .timerData:after {
-  content: ":";
-  // letter-spacing: 10px;
-  // margin-left: 5px;
-  // padding: 0 3px;
-}
+// .timerContainer .timerUnitWrapper:nth-child(-n + 2) .timerData:after {
+//   content: ":";
+//   // letter-spacing: 10px;
+//   // margin-left: 5px;
+//   // padding: 0 3px;
+// }

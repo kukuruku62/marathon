@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
 import styles from "./Timer.module.scss";
-import { useSelector } from "react-redux";
 
 export const Timer = ({ timeOfStartFirstEvent }) => {
   const [isComplete, setIsComplete] = useState(false);
@@ -55,7 +54,7 @@ export const Timer = ({ timeOfStartFirstEvent }) => {
     <div className={styles.wrapper}>
       {isComplete && (
         <>
-          <h3 className={styles.title}>Next start:</h3>
+          <h3 className={styles.title}>ĎALŠÍ ŠTART</h3>
           <div className={styles.timerContainer}>
             <div className={styles.timerUnitWrapper}>
               <span className={styles.timerData}>{timerDays}</span>
