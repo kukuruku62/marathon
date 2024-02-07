@@ -1,10 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { useForm } from "react-hook-form";
 
 import styles from "./Registration.module.scss";
+import { useSingleEvent } from "../../hooks/useSingleEvent";
+import { useParams } from "react-router-dom";
 
 export const Registration = () => {
+  const { id } = useParams();
+  const {
+    _id,
+    name,
+    place,
+    type,
+    dateOfEvent,
+    timeOfStartEvent,
+    distances,
+    measurement,
+    payments,
+    addTimeStartEvent,
+  } = useSingleEvent(id);
+
+  // console.log(id, _id, name)
+  const [modal, setModal] = useState(false);
+  const [contentModal, setContentModal] = useState("");
+
+  const toggleModal = () => {
+    setModal(!modal);
+  };
+
+  if (modal) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "visible";
+  }
+
   const {
     register,
     formState: { errors, isValid },
@@ -13,11 +43,41 @@ export const Registration = () => {
   } = useForm({ mode: "onChange" });
 
   const submit = (data) => {
+    fetch("http://localhost:3002/api/auth/registration", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        setContentModal(res.message);
+        setModal(!modal);
+      });
+
     reset();
   };
   return (
     <section className={styles.wrapper}>
-      <h2 className={styles.title}>Registration</h2>
+      <h1 className={styles.title}>Registrácia</h1>
+      <div className={styles.listItems}>
+        <h2 className={styles.subtitle}>{name}</h2>
+        <ul>
+          <li>
+            Deň:<h3>{dateOfEvent}</h3>
+          </li>
+          <li>
+            Čas:
+            <h3>{timeOfStartEvent}</h3>
+          </li>
+          <li>
+            Typ:
+            <h3>{type}</h3>
+          </li>
+        </ul>
+      </div>
+
       <form className={styles.formWrapper} onSubmit={handleSubmit(submit)}>
         <div>
           <label className={styles.fieldWrapper}>
@@ -97,7 +157,6 @@ export const Registration = () => {
               type="email"
               {...register("email", {
                 required: "Povinné pole",
-                // minLength: { value: 3, message: "Minimum 3 letters" },
                 maxLength: { value: 40, message: "Maximum 40 letters" },
                 pattern: {
                   value:
@@ -117,6 +176,7 @@ export const Registration = () => {
           <label className={styles.radioWrapper}>
             <input
               type="radio"
+              value="Muž"
               name="gender"
               {...register("gender", {
                 required: true,
@@ -127,6 +187,7 @@ export const Registration = () => {
           <label className={styles.radioWrapper}>
             <input
               type="radio"
+              value="Žena"
               name="gender"
               {...register("gender", {
                 required: true,
@@ -140,9 +201,33 @@ export const Registration = () => {
             )}
           </div>
         </div>
+        <label className={styles.fieldWrapper}>
+          Dĺžka trasy:
+          <select className={styles.input} {...register("distance", {required: true})}>
+            <option value='' disabled selected>Vyberte dĺžku</option>
+            {distances &&
+              distances.map((distance, index) => (
+                <option
+                  value={`${distance} ${measurement}`}
+                  key={index}
+                >{`${distance} ${measurement}.`}</option>
+              ))}
+          </select>
+        </label>
 
         <input value="Odoslať" className={styles.inputSubmit} type="submit" disabled={!isValid} />
       </form>
+      {modal && (
+        <div className={styles.overlay} onClick={toggleModal}>
+          <div className={styles.modalContent}>
+            <p>{contentModal}</p>
+
+            <button className={styles.btnClose} onClick={toggleModal}>
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
