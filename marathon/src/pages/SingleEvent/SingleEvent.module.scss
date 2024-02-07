@@ -12,15 +12,30 @@
   padding: 0 50px;
 }
 
-
+.linkRegistration {
+  display: flex;
+  font-size: 24px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  align-self: center;
+  align-content: center;
+  justify-content: center;
+  width: 80%;
+  padding: 10px;
+  height: fit-content;
+  background-color: red;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
 
 .title {
   font-size: 32px;
   font-weight: 300;
   text-align: center;
   font-style: normal;
-  color: rgba(39, 58, 98, 0.863);
-  margin: 20px 0;
+  color: rgba(39, 58, 98, 0.9);
+  margin: 20px 0px;
 
   @media (max-width: 850px) {
     font-size: 50px;
@@ -35,17 +50,16 @@
   }
 }
 
-
 .listItems {
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
+  row-gap: 10px;
 }
 
 .item {
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: 5px;
 }
 
 .itemTitle {
@@ -53,22 +67,16 @@
   font-weight: 600;
 }
 
+.itemTitleCategory {
+  font-size: 16px;
+  font-weight: 600;
+  padding-left: 30px;
+}
+
 .itemText {
   font-size: 16px;
   padding-left: 30px;
-  
-}
-
-.wrapperInfoBlock {
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-}
-
-.wrapperListsCategory {
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
+  list-style-type: none;
 }
 
 .listCategory {
@@ -84,13 +92,23 @@
 .wrapperSponsors {
   display: flex;
   flex-direction: column;
-  row-gap: 15px;
-  border-top: 1px solid ;
-  border-bottom: 1px solid ;
-  border-image: radial-gradient(circle, rgba(65, 115, 144, 0.556) 0%, rgba(200, 234, 251, 0.797) 38%);
+  row-gap: 20px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-image: radial-gradient(
+    circle,
+    rgba(65, 115, 144, 0.556) 0%,
+    rgba(200, 234, 251, 0.797) 38%
+  );
   border-image-slice: 1;
-  padding: 10px 0;
-  margin-bottom: 20px;
+  padding: 15px 0;
+}
+
+.titleAdv {
+  margin: 0 auto;
+  color: rgba(39, 58, 98, 0.863);
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .advertising {
@@ -101,8 +119,6 @@
   list-style: none;
   flex-wrap: wrap;
   gap: 20px;
-
-  
 }
 
 .sponsorImg {
@@ -110,9 +126,14 @@
   align-self: center;
 }
 
-.titleAdv {
-  margin: 0 auto;
-  color: rgba(39, 58, 98, 0.863);
-  font-weight: 500;
-  font-size: 16px;
+.linkParticipants {
+  margin: 15px auto;
+  text-decoration: none;
+  list-style: none;
+  font-size: 24px;
+  color: rgba(39, 58, 98, 0.9);
+
+  h3 {
+    font-weight: 400;
+  }
 }
