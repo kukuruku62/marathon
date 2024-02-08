@@ -1,9 +1,14 @@
 import React from "react";
-import styles from "./MapOfEvent.module.scss";
+
 import { MapContainer, TileLayer, Marker, Tooltip, Polyline } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
+import styles from "./MapOfEvent.module.scss";
+
+
 export const MapOfEvent = () => {
+
+  //ДАННЫЕ ТОЧЕК ДЛЯ КАРТЫ
   const a = [
     ["48.278962", "17.048748"],
     ["48.279956", "17.056722"],
@@ -125,12 +130,12 @@ export const MapOfEvent = () => {
     ["48.279165", "17.050455"],
     ["48.278963", "17.048753"],
   ];
+
+
   return (
     <section className={styles.mapWrapper}>
-      {/* <div> */}
         <h3 className={styles.title}>Route map</h3>
         <p className={styles.description}>*Please note that the route may change if weather conditions worsen.</p>
-      {/* </div> */}
 
       <MapContainer
         center={[48.280325, 17.048564]}
