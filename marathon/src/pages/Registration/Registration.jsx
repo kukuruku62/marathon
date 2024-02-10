@@ -1,12 +1,20 @@
 import React, { useState } from "react";
-
 import { useForm } from "react-hook-form";
-
+import { createPortal } from "react-dom";
 import styles from "./Registration.module.scss";
 import { useSingleEvent } from "../../hooks/useSingleEvent";
 import { useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchAddNewParticipant } from "../../redux/listEventsSlice";
+import { Modal } from "./Modal";
 
 export const Registration = () => {
+
+  const dispatch = useDispatch();
+  const messageResponse = useSelector((state) => state.events.messageResponse);
+
+  const [modal, setModal] = useState(false);
+
   const { id } = useParams();
   const {
     _id,
@@ -18,12 +26,9 @@ export const Registration = () => {
     distances,
     measurement,
     payments,
-    addTimeStartEvent,
   } = useSingleEvent(id);
 
-  // console.log(id, _id, name)
-  const [modal, setModal] = useState(false);
-  const [contentModal, setContentModal] = useState("");
+
 
   const toggleModal = () => {
     setModal(!modal);
@@ -43,21 +48,12 @@ export const Registration = () => {
   } = useForm({ mode: "onChange" });
 
   const submit = (data) => {
-    fetch("http://localhost:3002/api/auth/registration", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .then((res) => {
-        setContentModal(res.message);
-        setModal(!modal);
-      });
-
+    dispatch(fetchAddNewParticipant({ id, data }));
+    console.log(statusResponse)
+    setModal(!modal);
     reset();
   };
+
   return (
     <section className={styles.wrapper}>
       <h1 className={styles.title}>Registrácia</h1>
@@ -88,10 +84,10 @@ export const Registration = () => {
               {...register("firstName", {
                 required: "Povinné pole",
                 minLength: { value: 3, message: "Minimum 3 letters" },
-                maxLength: { value: 25, message: "Maximum 20 letters" },
+                maxLength: { value: 25, message: "Maximum 30 letters" },
                 pattern: {
                   value: /^[A-Za-zČčŠšŽžÔôĽľÁáÄäÉéÍíÓóÖöÚúÝý]+$/i,
-                  message: "Len písmená, minimálna dĺžka 3 znaky, maximálne 25",
+                  message: "Len písmená, minimálna dĺžka 3 znaky, maximálne 30",
                 },
               })}
             />
@@ -112,10 +108,10 @@ export const Registration = () => {
               {...register("lastName", {
                 required: "Povinné pole",
                 minLength: { value: 3, message: "Minimum 3 letters" },
-                maxLength: { value: 25, message: "Maximum 20 letters" },
+                maxLength: { value: 25, message: "Maximum 30 letters" },
                 pattern: {
                   value: /^[A-Za-zČčŠšŽžÔôĽľÁáÄäÉéÍíÓóÖöÚúÝý]+$/i,
-                  message: "Len písmená, minimálna dĺžka 3 znaky, maximálne 25",
+                  message: "Len písmená, minimálna dĺžka 3 znaky, maximálne 30",
                 },
               })}
             />
@@ -157,7 +153,7 @@ export const Registration = () => {
               type="email"
               {...register("email", {
                 required: "Povinné pole",
-                maxLength: { value: 40, message: "Maximum 40 letters" },
+                maxLength: { value: 100, message: "Maximum 100 letters" },
                 pattern: {
                   value:
                     /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+[^<>()\.,;:\s@\"]{2,})$/,
@@ -203,8 +199,10 @@ export const Registration = () => {
         </div>
         <label className={styles.fieldWrapper}>
           Dĺžka trasy:
-          <select className={styles.input} {...register("distance", {required: true})}>
-            <option value='' disabled selected>Vyberte dĺžku</option>
+          <select className={styles.input} {...register("distance", { required: true })}>
+            <option value="" disabled>
+              Vyberte dĺžku
+            </option>
             {distances &&
               distances.map((distance, index) => (
                 <option
@@ -217,17 +215,11 @@ export const Registration = () => {
 
         <input value="Odoslať" className={styles.inputSubmit} type="submit" disabled={!isValid} />
       </form>
-      {modal && (
-        <div className={styles.overlay} onClick={toggleModal}>
-          <div className={styles.modalContent}>
-            <p>{contentModal}</p>
 
-            <button className={styles.btnClose} onClick={toggleModal}>
-              Close
-            </button>
-          </div>
-        </div>
-      )}
+      {modal &&
+        createPortal(
+          <Modal toggleModal={toggleModal} messageResponse={messageResponse} />, document.body
+        )}
     </section>
   );
 };
