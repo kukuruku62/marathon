@@ -8,13 +8,14 @@ import { useParams } from "react-router-dom";
 
 export const Participants = () => {
   const { id } = useParams();
-  const { participants } = useSingleEvent(id);
+  const { name, participants } = useSingleEvent(id);
 
   // TODO: ADD CASE ERROR!!!!!!!!!!!!!!!
   return (
     <section className={styles.wrapper}>
       <div className={styles.inner}>
-        <h2 className={styles.title}>Zoznam prihlásených účastníkov:</h2>
+        {name && <h2 className={styles.title}>{name}</h2>}
+        <h3 className={styles.subtitle}>Registrovaní účastníci:</h3>
         {/* {statusFetch === "loading" && <SkeletonBike />} */}
         {participants && (
           <ul className={styles.list}>
