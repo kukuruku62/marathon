@@ -46,8 +46,7 @@ export const createCheckout = async (req, res) => {
           quantity: 1,
         },
       ],
-      // разобраться с урл, сейчас ошибоный
-      return_url: "http://localhost:3002/payment/return?session_id={CHECKOUT_SESSION_ID}",
+      return_url: "http://localhost:5173/payment/return?session_id={CHECKOUT_SESSION_ID}",
       automatic_tax: { enabled: false },
     });
     res.send({ clientSecret: session.client_secret });
@@ -58,6 +57,7 @@ export const createCheckout = async (req, res) => {
 
 export const sessionStatus = async (req, res) => {
   const session = await stripe.checkout.sessions.retrieve(req.query.session_id);
+  
   res.send({
     status: session.status,
     customer_email: session.customer_details.email,

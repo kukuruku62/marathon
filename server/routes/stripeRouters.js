@@ -1,7 +1,6 @@
+import express from "express";
 import { Router } from "express";
 import { createCheckout, sessionStatus, handleStripeWebhookEvent } from "../controllers/StripeControllers.js";
-import bodyParser from "body-parser";
-import express from "express";
 
 const router = Router();
 
