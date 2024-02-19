@@ -7,7 +7,7 @@ import styles from "./SingleEvent.module.scss";
 export const Sponsors = ({ sponsorsEvent }) => {
   return (
     <article className={styles.wrapperSponsors}>
-      <h3 className={styles.titleAdv}>Sponsors and partners:</h3>
+      <h3 className={styles.titleAdv}>Sponzori a partneri:</h3>
       <ul className={styles.advertising}>
         {sponsorsEvent.map(({ _id, linkSite, linkImage }) => (
           <li key={_id}>
