@@ -1,24 +1,23 @@
 export const sortArrayOfEventsByDateAndTime = (a, b) => {
-
-  const dateA = new Date(a.date);
-  const dateB = new Date(b.date);
+  const dateA = new Date(a.dateOfEvent);
+  const dateB = new Date(b.dateOfEvent);
 
   if (dateA.getTime() < dateB.getTime()) {
     return -1;
   } else if (dateA.getTime() > dateB.getTime()) {
     return 1;
   } else {
-    // Если даты равны, то сортируем по времени
-    const timeA = new Date(a.date + " " + a.time);
-    const timeB = new Date(b.date + " " + b.time);
+    // If dates are equal sort by date
+    const timeA = new Date(a.dateOfEvent + " " + a.timeOfStartEvent);
+    const timeB = new Date(b.dateOfEvent + " " + b.timeOfStartEvent);
 
     if (timeA.getTime() < timeB.getTime()) {
       return -1;
     } else if (timeA.getTime() > timeB.getTime()) {
       return 1;
     } else {
-      // Если время также равно, то оставляем элементы в текущем порядке
+      //If times also are equal don't change the order
       return 0;
     }
   }
-}
+};
