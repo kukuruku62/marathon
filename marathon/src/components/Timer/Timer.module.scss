@@ -3,8 +3,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: rgb(255, 255, 255);
-  background: rgb(238, 28, 37) 90%;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgb(238, 28, 37);
   height: 80px;
 }
 
@@ -12,21 +12,18 @@
   letter-spacing: 10px;
   font-weight: 400;
   font-style: italic;
-  opacity: 85%;
 }
 
 .timerContainer {
   display: flex;
   flex-direction: row;
   column-gap: 30px;
-  opacity: 85%;
 }
 
 .timerUnitWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
- 
 }
 
 .timerText {
@@ -41,10 +38,3 @@
   font-family: Roboto;
   line-height: 32px;
 }
-
-// .timerContainer .timerUnitWrapper:nth-child(-n + 2) .timerData:after {
-//   content: ":";
-//   // letter-spacing: 10px;
-//   // margin-left: 5px;
-//   // padding: 0 3px;
-// }
