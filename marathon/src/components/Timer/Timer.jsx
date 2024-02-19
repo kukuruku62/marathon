@@ -1,54 +1,10 @@
-import React, { useEffect, useState, useRef } from "react";
+import React from "react";
+import { useTimer } from "../../hooks/useTimer";
+
 import styles from "./Timer.module.scss";
 
 export const Timer = ({ dateAndTimeFirstEvent }) => {
-  const [isReady, setIsReady] = useState(false);
-  const [timerDays, setTimerDays] = useState("00");
-  const [timerHours, setTimerHours] = useState("00");
-  const [timerMinutes, setTimerMinutes] = useState("00");
-
-  let interval = useRef();
-
-  function setDataLength(data) {
-    if (data < 10) {
-      return String(data).padStart(2, "0");
-    } else {
-      return data;
-    }
-  }
-
-  const startTimer = () => {
-    const countdownDate = new Date(dateAndTimeFirstEvent).getTime();
-
-    interval = setTimeout(() => {
-      const currentTime = new Date().getTime();
-      const differenceOfTime = countdownDate - currentTime;
-
-      const days = setDataLength(Math.floor(differenceOfTime / (1000 * 60 * 60 * 24)));
-      const hours = setDataLength(
-        Math.floor((differenceOfTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-      );
-      const minutes = setDataLength(
-        Math.floor((differenceOfTime % (1000 * 60 * 60)) / (1000 * 60))
-      );
-
-      if (differenceOfTime < 0) {
-        clearInterval(interval.current);
-      } else {
-        setTimerDays(days);
-        setTimerHours(hours);
-        setTimerMinutes(minutes);
-        setIsReady(true);
-      }
-    }, 1000);
-  };
-
-  useEffect(() => {
-    startTimer();
-    return () => {
-      clearInterval(interval.current);
-    };
-  });
+  const { timerDays, timerHours, timerMinutes, isReady } = useTimer(dateAndTimeFirstEvent);
 
   return (
     <div className={styles.wrapper}>
