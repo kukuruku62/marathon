@@ -13,11 +13,13 @@ export const getAllEvents = async (req, res) => {
       "measurement",
     ]);
 
-    if (listEvents.length === 0) {
+    const filteredEventsByCurrentDate = listEvents.filter((event) => Date.parse(event.dateOfEvent + " " + event.timeOfStartEvent) >= Date.now());
+
+    if (filteredEventsByCurrentDate.length === 0) {
       return res.status(404).send("Events not found");
     }
 
-    res.status(200).json(listEvents);
+    res.status(200).json(filteredEventsByCurrentDate);
   } catch (error) {
     res.status(500).send("Server events error");
   }
@@ -97,6 +99,7 @@ export const postEvent = async (req, res) => {
       categoriesMale,
       categoriesFemale,
       addCategories,
+      paymentsNew,
     } = req.body;
 
     const newEvent = new Event({
@@ -117,6 +120,7 @@ export const postEvent = async (req, res) => {
       presentation,
       addPresentation,
       payments,
+      paymentsNew,
       addPayments,
       categoriesMale,
       categoriesFemale,
@@ -147,5 +151,3 @@ export const getParticipantsOfEvent = async (req, res) => {
     res.status(500).json({ message: "Server error getParticipantsOfEvent" });
   }
 };
-
-

@@ -21,12 +21,12 @@ const eventsSlice = createSlice({
     singleEvent: "",
     listEvents: [],
     listMainSponsors: [],
+    listParticipants: [],
     dateAndTimeFirstEvent: null,
     firstEvent: null,
     dateOfNextEvent: null,
     status: null,
     fetchErrorMessage: null,
-    listParticipants: [],
     registeredParticipant: null,
   },
   reducers: {
@@ -44,9 +44,7 @@ const eventsSlice = createSlice({
         state.status = "resolved";
         state.fetchErrorMessage = null;
         if (Array.isArray(action.payload)) {
-          state.listEvents = action.payload.filter(
-              (event) => Date.parse(event.dateOfEvent + " " + event.timeOfStartEvent) >= Date.now()
-            ).sort(sortArrayOfEventsByDateAndTime);
+          state.listEvents = action.payload.sort(sortArrayOfEventsByDateAndTime);
           state.firstEvent = state.listEvents[0];
           state.dateAndTimeFirstEvent = state.listEvents[0].dateOfEvent + " " + state.listEvents[0].timeOfStartEvent;
           state.dateOfNextEvent = new Date(state.listEvents[0].dateOfEvent).toLocaleDateString();
