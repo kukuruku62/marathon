@@ -1,18 +1,22 @@
 import React from "react";
-import { useForm } from "react-hook-form";
-import styles from "./Registration.module.scss";
-import { useSingleEvent } from "../../hooks/useSingleEvent";
-import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addParticipant } from "../../redux/listEventsSlice";
+import { useForm } from "react-hook-form";
+import { useParams } from "react-router-dom";
+
+import { useSingleEvent } from "../../hooks/useSingleEvent";
 import { CheckoutForm } from "../../components/Stripe/CheckoutForm";
+import { SkeletonBike } from "../../components/SkeletonBike/SkeletonBike";
+import { Title } from "./Title";
+
+import styles from "./Registration.module.scss";
 
 export const Registration = () => {
   const dispatch = useDispatch();
   const participant = useSelector((state) => state.events.registeredParticipant);
 
   const { id } = useParams();
-  const { _id, name, type, dateOfEvent, timeOfStartEvent, distances, measurement } = useSingleEvent(id);
+  const { status, _id, name, type, dateOfEvent, timeOfStartEvent, distances, measurement } = useSingleEvent(id);
 
   const {
     register,
@@ -28,29 +32,12 @@ export const Registration = () => {
 
   return (
     <section className={styles.wrapper}>
-      <article className={styles.titlesList}>
-        <h1 className={styles.title}>Registrácia a plat'ba</h1>
-        <div className={styles.listDescroptionEvent}>
-          <h2 className={styles.subtitle}>{name}</h2>
-          <ul>
-            <li>
-              <h3>Deň:</h3>
-              <p>{dateOfEvent}</p>
-            </li>
-            <li>
-              <h3>Čas:</h3>
-              <p>{timeOfStartEvent}</p>
-            </li>
-            <li>
-              <h3>Typ:</h3>
-              <p>{type}</p>
-            </li>
-          </ul>
-        </div>
-      </article>
+      {status === "loading" && <SkeletonBike />}
+      {status === "resolved" && <Title name={name} dateOfEvent={dateOfEvent} timeOfStartEvent={timeOfStartEvent} type={type}/>}
       <article className={styles.container}>
         {!participant && (
           <form className={styles.formWrapper} onSubmit={handleSubmit(submit)}>
+            <h4>*Po vyplnení a odoslaní formulára budete presmerovaní na platobnú stránku.</h4>
             <div>
               <label className={styles.fieldWrapper}>
                 Meno:
@@ -60,9 +47,9 @@ export const Registration = () => {
                   {...register("firstName", {
                     required: "Povinné pole",
                     minLength: { value: 3, message: "Minimum 3 letters" },
-                    maxLength: { value: 25, message: "Maximum 30 letters" },
+                    maxLength: { value: 50, message: "Maximum 50 letters" },
                     pattern: {
-                      value: /^[A-Za-zČčŠšŽžÔôĽľÁáÄäÉéÍíÓóÖöÚúÝý]+$/i,
+                      value: /^[a-zA-ZáäčďéíĺľňóôŕšťúýžÁÄČĎÉÍĽĹŇÓÔŔŠŤÚÝŽ ]+$/i,
                       message: "Len písmená, minimálna dĺžka 3 znaky, maximálne 30",
                     },
                   })}
@@ -84,9 +71,9 @@ export const Registration = () => {
                   {...register("lastName", {
                     required: "Povinné pole",
                     minLength: { value: 3, message: "Minimum 3 letters" },
-                    maxLength: { value: 25, message: "Maximum 30 letters" },
+                    maxLength: { value: 50, message: "Maximum 50 letters" },
                     pattern: {
-                      value: /^[A-Za-zČčŠšŽžÔôĽľÁáÄäÉéÍíÓóÖöÚúÝý]+$/i,
+                      value: /^[a-zA-ZáäčďéíĺľňóôŕšťúýžÁÄČĎÉÍĽĹŇÓÔŔŠŤÚÝŽ ]+$/i,
                       message: "Len písmená, minimálna dĺžka 3 znaky, maximálne 30",
                     },
                   })}
@@ -135,7 +122,7 @@ export const Registration = () => {
                     pattern: {
                       value:
                         /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+[^<>()\.,;:\s@\"]{2,})$/,
-                      message: "example@example.com",
+                      message: "vo formate: example@example.com",
                     },
                   })}
                 />
@@ -177,7 +164,11 @@ export const Registration = () => {
             </div>
             <label className={styles.fieldWrapper}>
               Dĺžka trasy:
-              <select className={styles.input} {...register("distance", { required: true })}>
+              <select
+                className={styles.input}
+                {...register("distance", { required: true })}
+                defaultValue=""
+              >
                 <option value="" disabled>
                   Vyberte dĺžku
                 </option>
