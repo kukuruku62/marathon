@@ -46,7 +46,7 @@ export const createCheckout = async (req, res) => {
           quantity: 1,
         },
       ],
-      return_url: "http://localhost:5173/payment/return?session_id={CHECKOUT_SESSION_ID}",
+      return_url: "https://marathon-two.vercel.app/payment/return?session_id={CHECKOUT_SESSION_ID}",
       automatic_tax: { enabled: false },
     });
     res.send({ clientSecret: session.client_secret });
@@ -67,24 +67,21 @@ export const sessionStatus = async (req, res) => {
 export const handleStripeWebhookEvent = (req, response) => {
   const sig = req.headers["stripe-signature"];
   let event;
-  // console.log('ret')
+
   try {
     event = stripe.webhooks.constructEvent(req.body, sig, endpointSecret);
-    // console.log('sec')
   } catch (err) {
-    // console.log('ytr')
     response.status(400).send(`Webhook Error: ${err.message}`);
     return;
   }
+
   let data = event.data.object;
 
   if (event.type === "checkout.session.completed") {
-    // console.log('dsfsadwe3')
     stripe.customers
       .retrieve(data.customer)
       .then(async (customer) => {
         try {
-          // console.log('dsf')
           addPartisipantToDataBase(customer.metadata);
         } catch (err) {
           console.log(err);
@@ -93,6 +90,5 @@ export const handleStripeWebhookEvent = (req, response) => {
       .catch((err) => console.log(err.message));
   }
 
-  // Return a 200 response to acknowledge receipt of the event
   response.send();
 };
