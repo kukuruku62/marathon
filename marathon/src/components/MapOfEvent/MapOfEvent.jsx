@@ -1,10 +1,6 @@
 import React from "react";
 
-
 import "leaflet/dist/leaflet.css";
-
-import "leaflet/dist/images/marker-shadow.png";
-import "leaflet/dist/images/marker-icon-2x.png";
 
 import { MapContainer, TileLayer, Marker, Tooltip, Polyline } from "react-leaflet";
 
