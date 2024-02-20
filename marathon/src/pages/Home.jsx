@@ -1,22 +1,21 @@
-import React from 'react'
+import React from "react";
 
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchSchedule } from "../store/listEventsSlice.js";
-import { useDateEvents } from "../components/useDateEvents.js";
-import { Schedule } from '../components/Schedule/Schedule.jsx';
-import { Slider } from "../components/Slider/Slider.jsx";
+import { fetchSchedule } from "../redux/listEventsSlice.js";
+import { Schedule } from "../components/Schedule/Schedule.jsx";
+import { About } from "../components/About/About.jsx";
 import { Advertising } from "../components/Advertising/Advertising.jsx";
-
+import { Timer } from "../components/Timer/Timer.jsx";
 
 export const Home = () => {
   const dispatch = useDispatch();
+  const status = useSelector((state) => state.events.status);
+  const firstEvent = useSelector((state) => state.events.firstEvent);
+  const listEvents = useSelector((state) => state.events.listEvents);
   const dateOfNextEvent = useSelector((state) => state.events.dateOfNextEvent);
-  const statusOfFetch = useSelector((state) => state.events.status);
-  const errorMessage = useSelector((state) => state.events.errorMessage);
-  const listOfEvents = useSelector((state) => state.events.events);
-  const listMainSponsors = useSelector((state) => state.events.listMainSponsors)
-  const { transformFormatOfDate, renderSeasonOfEvent } = useDateEvents();
+  const dateAndTimeFirstEvent = useSelector((state) => state.events.dateAndTimeFirstEvent);
+  const listMainSponsors = useSelector((state) => state.events.listMainSponsors);
 
   useEffect(() => {
     dispatch(fetchSchedule());
@@ -24,16 +23,10 @@ export const Home = () => {
 
   return (
     <>
-      <Slider
-        seasonOfNextEvent={renderSeasonOfEvent(dateOfNextEvent)}
-        dateOfNextEvent={transformFormatOfDate(dateOfNextEvent)}
-      />
-      <Schedule
-        statusOfFetch={statusOfFetch}
-        listOfEvents={listOfEvents}
-        errorMessage={errorMessage}
-      />
-      <Advertising listMainSponsors={listMainSponsors}/>
+      <Timer dateAndTimeFirstEvent={dateAndTimeFirstEvent} />
+      <About firstEvent={firstEvent} dateOfNextEvent={dateOfNextEvent} />
+      <Schedule status={status} listEvents={listEvents} />
+      <Advertising listMainSponsors={listMainSponsors} />
     </>
   );
-}
+};
