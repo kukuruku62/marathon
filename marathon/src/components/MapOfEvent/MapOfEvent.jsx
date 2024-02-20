@@ -2,8 +2,12 @@ import React from "react";
 
 import { MapContainer, TileLayer, Marker, Tooltip, Polyline } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import "leaflet/dist/images/marker-shadow.png";
-import "leaflet/dist/images/marker-icon-2x.png";
+import { icon } from "leaflet"
+
+const ICON = icon({
+  iconUrl: "/marker.png",
+  iconSize: [32, 32],
+})
 
 import styles from "./MapOfEvent.module.scss";
 
@@ -148,10 +152,10 @@ export const MapOfEvent = () => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={[48.2798, 17.0483]}>
+        <Marker icon={ICON} position={[48.2798, 17.0483]}>
           <Tooltip>Nová 66, 900 31 Stupava Bajkservis Registration</Tooltip>
         </Marker>
-        <Marker position={[48.278966, 17.048793]}>
+        <Marker icon={ICON} position={[48.278966, 17.048793]}>
           <Tooltip>Start / Finish</Tooltip>
         </Marker>
         <Polyline positions={a} pathOptions={{ color: "#A60000" }} />
