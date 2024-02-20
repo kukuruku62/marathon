@@ -1,6 +1,8 @@
 import React from "react";
-import styles from "./Header.module.scss";
 import { Link } from "react-router-dom";
+import styles from "./Header.module.scss";
+
+import FlagSvg from "../../assets/svg/flag.svg?react";
 
 export const Header = () => {
   return (
@@ -8,7 +10,7 @@ export const Header = () => {
       <div className={styles.headerWrapper}>
         <div className={styles.headerInner}>
           <Link to="/">
-            <img className={styles.flag} src="../../assets/img/flag.svg" alt="Vlajka" />
+            <FlagSvg className={styles.flag}  alt="Vlajka"/>
           </Link>
           <h2 className={styles.headerTitle}>STUPAVA MARATÓN</h2>
         </div>
