@@ -14,15 +14,15 @@ export const Timer = ({ dateAndTimeFirstEvent }) => {
           <div className={styles.timerContainer}>
             <div className={styles.timerUnitWrapper}>
               <span className={styles.timerData}>{timerDays}</span>
-              <span className={styles.timerText}>days</span>
+              <span className={styles.timerText}>dni</span>
             </div>
             <div className={styles.timerUnitWrapper}>
               <span className={styles.timerData}>{timerHours}</span>
-              <span className={styles.timerText}>hours</span>
+              <span className={styles.timerText}>hodiny</span>
             </div>
             <div className={styles.timerUnitWrapper}>
               <span className={styles.timerData}>{timerMinutes}</span>
-              <span className={styles.timerText}>minutes</span>
+              <span className={styles.timerText}>minúty</span>
             </div>
           </div>
         </>

@@ -135,7 +135,7 @@ export const MapOfEvent = () => {
   return (
     <section className={styles.mapWrapper}>
         <h3 className={styles.title}>Route map</h3>
-        <p className={styles.description}>*Trasa trasy sa môže meniť v závislosti od poveternostných podmienok.</p>
+        <p className={styles.description}>*Trasa sa môže meniť v závislosti od poveternostných podmienok.</p>
 
       <MapContainer
         center={[48.280325, 17.048564]}
