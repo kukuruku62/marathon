@@ -6,7 +6,7 @@ export const fetchSchedule = createAsyncThunk(
   "events/fetchSchedule",
   async function (id = "", thunkAPI) {
     try {
-      const response = await fetch(`http://localhost:3002/api/events/${id}`);
+      const response = await fetch(`https://stupava-marathon.vercel.app/api/events/${id}`);
       const data = await response.json();
       return data;
     } catch (error) {

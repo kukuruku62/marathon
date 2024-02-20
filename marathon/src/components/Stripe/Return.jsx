@@ -14,7 +14,7 @@ export const Return = () => {
     const urlParams = new URLSearchParams(queryString);
     const sessionId = urlParams.get("session_id");
 
-    fetch(`http://localhost:3002/api/stripe/session-status?session_id=${sessionId}`)
+    fetch(`https://stupava-marathon.vercel.app/api/stripe/session-status?session_id=${sessionId}`)
       .then((res) => res.json())
       .then((data) => {
         setStatus(data.status);
