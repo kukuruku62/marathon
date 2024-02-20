@@ -13,7 +13,7 @@ export const CheckoutForm = () => {
   const [clientSecret, setClientSecret] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:3002/api/stripe/create-checkout-session", {
+    fetch("https://stupava-marathon.vercel.app/api/stripe/create-checkout-session", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
