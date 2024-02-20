@@ -1,0 +1,40 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgb(238, 28, 37);
+  height: 80px;
+}
+
+.title {
+  letter-spacing: 10px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.timerContainer {
+  display: flex;
+  flex-direction: row;
+  column-gap: 30px;
+}
+
+.timerUnitWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timerText {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: Roboto;
+}
+
+.timerData {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: Roboto;
+  line-height: 32px;
+}

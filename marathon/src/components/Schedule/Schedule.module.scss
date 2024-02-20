@@ -1,0 +1,264 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.gridItem {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px rgb(45, 76, 105) solid;
+
+  a {
+    text-decoration: none;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+  }
+
+  &:nth-of-type(5n + 1) {
+    &:before {
+      background-image: linear-gradient(
+          127deg,
+          rgba(103, 133, 162, 0.953),
+          rgba(239, 206, 145, 0.377)
+        ),
+        url("../src/assets/img/beh.jpg");
+      background-position: center 60%;
+    }
+  }
+
+  &:nth-of-type(5n + 2) {
+    &:before {
+      background-image: linear-gradient(
+          127deg,
+          rgba(103, 133, 162, 0.953),
+          rgba(239, 206, 145, 0.377)
+        ),
+        url("../src/assets/img/vel.jpg");
+      background-position: center 80%;
+    }
+  }
+
+  &:nth-of-type(5n + 3) {
+    &:before {
+      background-image: linear-gradient(
+          127deg,
+          rgba(103, 133, 162, 0.953),
+          rgba(239, 206, 145, 0.377)
+        ),
+        url("../src/assets/img/run2.jpg");
+      background-position: left center;
+    }
+  }
+
+  &:nth-of-type(5n + 4) {
+    &:before {
+      background-image: linear-gradient(
+          127deg,
+          rgba(103, 133, 162, 0.953),
+          rgba(239, 206, 145, 0.377)
+        ),
+        url("../src/assets/img/start-marathon-small2.jpg");
+      background-position: center 30%;
+    }
+  }
+
+  &:nth-of-type(5n + 5) {
+    &:before {
+      background-image: linear-gradient(
+          127deg,
+          rgba(103, 133, 162, 0.953),
+          rgba(239, 206, 145, 0.377)
+        ),
+        url("../src/assets/img/vel1.jpg");
+      background-position: center 60%;
+    }
+  }
+}
+
+.content {
+  max-width: 1440px;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 5%;
+  margin: 0 auto;
+  cursor: pointer;
+
+  @media (max-width: 1000px) {
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto;
+    row-gap: 15px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
+}
+
+.title {
+  color: rgba(255, 255, 255, 0.8);
+  background: rgb(238, 28, 37);
+  font-size: 38px;
+  text-align: center;
+  padding: 5px 0;
+  letter-spacing: 20px;
+  font-weight: 700;
+  font-style: italic;
+  margin: 0;
+
+  @media (max-width: 850px) {
+    font-size: 32px;
+  }
+
+  @media (max-width: 650px) {
+    font-size: 32px;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 32px;
+  }
+}
+
+.subtitle {
+  font-size: 40px;
+  font-weight: 700;
+  font-style: italic;
+  color: rgb(255, 255, 255);
+  width: calc((100% - 10%) / 3);
+}
+
+.date,
+.distance {
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+  // place-self:  end;
+}
+
+.distanceContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: calc((100% - 10%) / 3);
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (max-width: 1000px) {
+    flex-direction: row;
+  }
+
+  .distance:not(:nth-last-of-type(2)) {
+    &:after {
+      content: "";
+      border-right: 2px rgba(217, 217, 217, 0.61) solid;
+      margin: 0 10px;
+
+      @media (max-width: 1200px) {
+        border-right: none;
+        margin: 0;
+      }
+
+      @media (max-width: 1000px) {
+        border-right: 2px rgba(217, 217, 217, 0.61) solid;
+        margin: 0 10px;
+      }
+    }
+  }
+
+  .measurement {
+    margin-left: 10px;
+    font-size: 40px;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    align-self: center;
+
+    @media (max-width: 1200px) {
+      margin: 0;
+    }
+  }
+}
+
+.dateAndTimeWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: calc((100% - 10%) / 3);
+}
+
+@media (hover: hover) {
+  .gridItem {
+    &:hover:before {
+      transform: scale(1.05);
+    }
+
+    &:nth-of-type(5n + 1):hover:before {
+      background-image: linear-gradient(
+          127deg,
+          rgba(25, 70, 113, 0.468),
+          rgba(217, 176, 100, 0.289)
+        ),
+        url("../src/assets/img/beh.jpg");
+      background-position: center 60%;
+    }
+
+    &:nth-of-type(5n + 2):hover:before {
+      background-image: linear-gradient(
+          127deg,
+          rgba(25, 70, 113, 0.468),
+          rgba(217, 176, 100, 0.289)
+        ),
+        url("../src/assets/img/vel.jpg");
+      background-position: center 80%;
+    }
+
+    &:nth-of-type(5n + 3):hover:before {
+      background-image: linear-gradient(
+          127deg,
+          rgba(25, 70, 113, 0.468),
+          rgba(217, 176, 100, 0.289)
+        ),
+        url("../src/assets/img/run2.jpg");
+      background-position: left center;
+    }
+
+    &:nth-of-type(5n + 4):hover:before {
+      background-image: linear-gradient(
+          127deg,
+          rgba(25, 70, 113, 0.468),
+          rgba(217, 176, 100, 0.289)
+        ),
+        url("../src/assets/img/start-marathon-small2.jpg");
+      background-position: center 30%;
+    }
+
+    &:nth-of-type(5n + 5):hover:before {
+      background-image: linear-gradient(
+          127deg,
+          rgba(25, 70, 113, 0.468),
+          rgba(217, 176, 100, 0.289)
+        ),
+        url("../src/assets/img/vel1.jpg");
+      background-position: center 60%;
+    }
+  }
+}

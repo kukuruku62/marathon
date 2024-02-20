@@ -1,0 +1,51 @@
+.wrapperSponsors {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  max-width: 1440px;
+  padding: 0px 20px;
+  margin: 0 auto;
+  border-image-slice: 1;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.advertising {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  column-gap: 40px;
+
+  @media (max-width: 1024px) {
+  }
+}
+
+.sponsorImg {
+  max-height: 60px;
+  align-self: center;
+}
+
+
+.titleAdv {
+  font-size: 40px;
+  font-weight: 500;
+  text-align: center;
+  margin: 10px auto;
+  color: rgba(39, 58, 98, 0.863);
+
+  @media (max-width: 850px) {
+    font-size: 50px;
+  }
+
+  @media (max-width: 650px) {
+    font-size: 42px;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,494 @@
+[
+  {
+    "name": "STUPAVA RUN 0 MARATHON",
+    "place": "STUPAVA",
+    "variant": "",
+    "participants": [],
+    "type": "RUN",
+    "date": "2024-02-25",
+    "sponsors": [
+      {
+        "linkSite": "https://bratislavskykraj.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53481657622_ab27baf742_m.jpg"
+      },
+      {
+        "linkSite": "https://www.stupava.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53483032603_ca0e1f3398_m.jpg"
+      },
+      {
+        "linkSite": "https://bajkservis.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53482891111_4f10b4ae3c_m.jpg"
+      },
+      {
+        "linkSite": "https://www.faxcopy.sk/",
+        "linkImage": "https://live.staticflickr.com/65535/53484186791_5753c7de1f_m.jpg"
+      }
+    ],
+    "addDate": "Additional information in the form of a line/ whole paragraph can be located here...",
+    "time": "11:30",
+    "addTime": "Additional information in the form of a line/ whole paragraph can be located here...",
+    "length": ["10"],
+    "measurement": "km",
+    "start point": "Stupava, Penzión INTENZÍVA - BAJKSERVIS (Nová ulica 66)",
+    "registration": ["zdcsdsdfsdsdfsd 09.12.26", "sdsfdefefe - fdgdf - 342"],
+    "addRegistration": "Additional information in the form of a line field for it has not been filled in, it will not be displayed.",
+    "presentation": [
+      "od 15. do 19.1 2024 v priestoroch bicyklového obchodu BAJKSERVIS (Nová 66) počas otváracích hodín 12:00-18.00)",
+      "20.1. 2024 v priestoroch penziónu Intenzíva od 9:00-10.45"
+    ],
+    "addPresentation": "Additional information in the form of a line field for it has not been filled in, it will not be displayed.",
+    "payments": [
+      "till 31.12.2023: 17€",
+      "from 01.01.2024 to 29.02.2024: 27€",
+      "from 01.01.2024 to 29.02.2025: 37€"
+    ],
+    "addPayments": "Additional Information. Can be specified if necessary.",
+    "categories": {
+      "ženy": {
+        "A": "do 29 rokov",
+        "B": "30 - 39 rokov",
+        "C": "40+ rokov"
+      },
+      "muži": {
+        "D": "do 18 rokov",
+        "E": "19 - 29 rokov",
+        "F": "30 - 39 rokov",
+        "G": "40 - 49 rokov",
+        "H": "50+ rokov"
+      }
+    },
+    "addCategories": "Additional information in the form of a line/ whole paragraph can be located here. If the field for it has not been filled in, it will not be displayed."
+  },
+  {
+    "name": "STUPAVA RUN 1 MARATHON",
+    "place": "STUPAVA",
+    "variant": "STUPAVA FRIENDS",
+    "participants": [],
+    "type": "RUN",
+    "date": "2024-02-26",
+    "sponsors": [
+      {
+        "linkSite": "https://bratislavskykraj.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53481657622_ab27baf742_m.jpg"
+      },
+      {
+        "linkSite": "https://www.stupava.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53483032603_ca0e1f3398_m.jpg"
+      },
+      {
+        "linkSite": "https://bajkservis.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53482891111_4f10b4ae3c_m.jpg"
+      },
+      {
+        "linkSite": "https://www.faxcopy.sk/",
+        "linkImage": "https://live.staticflickr.com/65535/53484186791_5753c7de1f_m.jpg"
+      }
+    ],
+    "addDate": "Additional information in the form of a line/ whole paragraph can be located here...",
+    "time": "11:30",
+    "addTime": "Additional information in the form of a line/ whole paragraph can be located here...",
+    "length": ["10", "25"],
+    "measurement": "km",
+    "start point": "Stupava, Penzión INTENZÍVA - BAJKSERVIS (Nová ulica 66)",
+    "registration": ["zdcsdsdfsdsdfsd 09.12.26", "sdsfdefefe - fdgdf - 342"],
+    "addRegistration": "Additional information in the form of a line field for it has not been filled in, it will not be displayed.",
+    "presentation": [
+      "od 15. do 19.1 2024 v priestoroch bicyklového obchodu BAJKSERVIS (Nová 66) počas otváracích hodín 12:00-18.00)",
+      "20.1. 2024 v priestoroch penziónu Intenzíva od 9:00-10.45"
+    ],
+    "addPresentation": "Additional information in the form of a line field for it has not been filled in, it will not be displayed.",
+    "payments": [
+      "till 31.12.2023: 17€",
+      "from 01.01.2024 to 29.02.2024: 27€",
+      "from 01.01.2024 to 29.02.2025: 37€"
+    ],
+    "addPayments": "Additional Information. Can be specified if necessary.",
+    "categories": {
+      "ženy": {
+        "A": "do 29 rokov",
+        "B": "30 - 39 rokov",
+        "C": "40+ rokov"
+      },
+      "muži": {
+        "D": "do 18 rokov",
+        "E": "19 - 29 rokov",
+        "F": "30 - 39 rokov",
+        "G": "40 - 49 rokov",
+        "H": "50+ rokov"
+      }
+    },
+    "addCategories": "Additional information in the form of a line/ whole paragraph can be located here. If the field for it has not been filled in, it will not be displayed."
+  },
+  {
+    "name": "STUPAVA RUN 2 MARATHON",
+    "place": "STUPAVA",
+    "participants": [],
+    "variant": "",
+    "type": "MTB",
+    "date": "2024-02-27",
+    "sponsors": [
+      {
+        "linkSite": "https://bratislavskykraj.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53481657622_ab27baf742_m.jpg"
+      },
+      {
+        "linkSite": "https://www.stupava.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53483032603_ca0e1f3398_m.jpg"
+      },
+      {
+        "linkSite": "https://bajkservis.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53482891111_4f10b4ae3c_m.jpg"
+      },
+      {
+        "linkSite": "https://www.faxcopy.sk/",
+        "linkImage": "https://live.staticflickr.com/65535/53484186791_5753c7de1f_m.jpg"
+      }
+    ],
+    "addDate": "Additional information in the form of a line/ whole paragraph can be located here...",
+    "time": "11:30",
+    "addTime": "Additional information in the form of a line/ whole paragraph can be located here...",
+    "length": ["10", "25"],
+    "measurement": "km",
+    "start point": "Stupava, Penzión INTENZÍVA - BAJKSERVIS (Nová ulica 66)",
+    "registration": ["zdcsdsdfsdsdfsd 09.12.26", "sdsfdefefe - fdgdf - 342"],
+    "addRegistration": "Additional information in the form of a line field for it has not been filled in, it will not be displayed.",
+    "presentation": [
+      "od 15. do 19.1 2024 v priestoroch bicyklového obchodu BAJKSERVIS (Nová 66) počas otváracích hodín 12:00-18.00)",
+      "20.1. 2024 v priestoroch penziónu Intenzíva od 9:00-10.45"
+    ],
+    "addPresentation": "Additional information in the form of a line field for it has not been filled in, it will not be displayed.",
+    "payments": [
+      "till 31.12.2023: 17€",
+      "from 01.01.2024 to 29.02.2024: 27€",
+      "from 01.01.2024 to 29.02.2025: 37€"
+    ],
+    "addPayments": "Additional Information. Can be specified if necessary.",
+    "categories": {
+      "ženy": {
+        "A": "do 29 rokov",
+        "B": "30 - 39 rokov",
+        "C": "40+ rokov"
+      },
+      "muži": {
+        "D": "do 18 rokov",
+        "E": "19 - 29 rokov",
+        "F": "30 - 39 rokov",
+        "G": "40 - 49 rokov",
+        "H": "50+ rokov"
+      }
+    },
+    "addCategories": "Additional information in the form of a line/ whole paragraph can be located here. If the field for it has not been filled in, it will not be displayed."
+  },
+  {
+    "name": "STUPAVA RUN 3 MARATHON",
+    "place": "STUPAVA",
+    "variant": "",
+    "participants": [],
+    "type": "RUN",
+    "date": "2024-02-28",
+    "sponsors": [
+      {
+        "linkSite": "https://bratislavskykraj.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53481657622_ab27baf742_m.jpg"
+      },
+      {
+        "linkSite": "https://www.stupava.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53483032603_ca0e1f3398_m.jpg"
+      },
+      {
+        "linkSite": "https://bajkservis.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53482891111_4f10b4ae3c_m.jpg"
+      },
+      {
+        "linkSite": "https://www.faxcopy.sk/",
+        "linkImage": "https://live.staticflickr.com/65535/53484186791_5753c7de1f_m.jpg"
+      }
+    ],
+    "addDate": "Additional information in the form of a line/ whole paragraph can be located here...",
+    "time": "11:30",
+    "addTime": "Additional information in the form of a line/ whole paragraph can be located here...",
+    "length": ["25", "42", "78"],
+    "measurement": "km",
+    "start point": "Stupava, Penzión INTENZÍVA - BAJKSERVIS (Nová ulica 66)",
+    "registration": ["zdcsdsdfsdsdfsd 09.12.26", "sdsfdefefe - fdgdf - 342"],
+    "addRegistration": "Additional information in the form of a line field for it has not been filled in, it will not be displayed.",
+    "presentation": [
+      "od 15. do 19.1 2024 v priestoroch bicyklového obchodu BAJKSERVIS (Nová 66) počas otváracích hodín 12:00-18.00)",
+      "20.1. 2024 v priestoroch penziónu Intenzíva od 9:00-10.45"
+    ],
+    "addPresentation": "Additional information in the form of a line field for it has not been filled in, it will not be displayed.",
+    "payments": [
+      "till 31.12.2023: 17€",
+      "from 01.01.2024 to 29.02.2024: 27€",
+      "from 01.01.2024 to 29.02.2025: 37€"
+    ],
+    "addPayments": "Additional Information. Can be specified if necessary.",
+    "categories": {
+      "ženy": {
+        "A": "do 29 rokov",
+        "B": "30 - 39 rokov",
+        "C": "40+ rokov"
+      },
+      "muži": {
+        "D": "do 18 rokov",
+        "E": "19 - 29 rokov",
+        "F": "30 - 39 rokov",
+        "G": "40 - 49 rokov",
+        "H": "50+ rokov"
+      }
+    },
+    "addCategories": "Additional information in the form of a line/ whole paragraph can be located here. If the field for it has not been filled in, it will not be displayed."
+  },
+  {
+    "name": "STUPAVA RUN 4 MARATHON",
+    "place": "STUPAVA",
+    "participants": [],
+    "variant": "ŠKODA FAMILY",
+    "type": "RUN",
+    "date": "2024-06-28",
+    "sponsors": [
+      {
+        "linkSite": "https://bratislavskykraj.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53481657622_ab27baf742_m.jpg"
+      },
+      {
+        "linkSite": "https://www.stupava.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53483032603_ca0e1f3398_m.jpg"
+      },
+      {
+        "linkSite": "https://bajkservis.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53482891111_4f10b4ae3c_m.jpg"
+      },
+      {
+        "linkSite": "https://www.faxcopy.sk/",
+        "linkImage": "https://live.staticflickr.com/65535/53484186791_5753c7de1f_m.jpg"
+      }
+    ],
+    "addDate": "Additional information in the form of a line/ whole paragraph can be located here...",
+    "time": "11:30",
+    "addTime": "Additional information in the form of a line/ whole paragraph can be located here...",
+    "length": ["25", "42", "78"],
+    "measurement": "km",
+    "start point": "Stupava, Penzión INTENZÍVA - BAJKSERVIS (Nová ulica 66)",
+    "registration": ["zdcsdsdfsdsdfsd 09.12.26", "sdsfdefefe - fdgdf - 342"],
+    "addRegistration": "Additional information in the form of a line field for it has not been filled in, it will not be displayed.",
+    "presentation": [
+      "od 15. do 19.1 2024 v priestoroch bicyklového obchodu BAJKSERVIS (Nová 66) počas otváracích hodín 12:00-18.00)",
+      "20.1. 2024 v priestoroch penziónu Intenzíva od 9:00-10.45"
+    ],
+    "addPresentation": "Additional information in the form of a line field for it has not been filled in, it will not be displayed.",
+    "payments": [
+      "till 31.12.2023: 17€",
+      "from 01.01.2024 to 29.02.2024: 27€",
+      "from 01.01.2024 to 29.02.2025: 37€"
+    ],
+    "addPayments": "Additional Information. Can be specified if necessary.",
+    "categories": {
+      "ženy": {
+        "A": "do 29 rokov",
+        "B": "30 - 39 rokov",
+        "C": "40+ rokov"
+      },
+      "muži": {
+        "D": "do 18 rokov",
+        "E": "19 - 29 rokov",
+        "F": "30 - 39 rokov",
+        "G": "40 - 49 rokov",
+        "H": "50+ rokov"
+      }
+    },
+    "addCategories": "Additional information in the form of a line/ whole paragraph can be located here. If the field for it has not been filled in, it will not be displayed."
+  },
+  {
+    "name": "STUPAVA RUN 5 MARATHON",
+    "place": "STUPAVA",
+    "participants": [],
+    "variant": "ŠKODA FAMILY",
+    "type": "RUN",
+    "date": "2024-06-28",
+    "sponsors": [
+      {
+        "linkSite": "https://bratislavskykraj.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53481657622_ab27baf742_m.jpg"
+      },
+      {
+        "linkSite": "https://www.stupava.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53483032603_ca0e1f3398_m.jpg"
+      },
+      {
+        "linkSite": "https://bajkservis.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53482891111_4f10b4ae3c_m.jpg"
+      },
+      {
+        "linkSite": "https://www.faxcopy.sk/",
+        "linkImage": "https://live.staticflickr.com/65535/53484186791_5753c7de1f_m.jpg"
+      }
+    ],
+    "addDate": "Additional information in the form of a line/ whole paragraph can be located here...",
+    "time": "11:30",
+    "addTime": "Additional information in the form of a line/ whole paragraph can be located here...",
+    "length": ["100", "400", "800", "1200"],
+    "measurement": "m",
+    "start point": "Stupava, Penzión INTENZÍVA - BAJKSERVIS (Nová ulica 66)",
+    "registration": ["zdcsdsdfsdsdfsd 09.12.26", "sdsfdefefe - fdgdf - 342"],
+    "addRegistration": "Additional information in the form of a line field for it has not been filled in, it will not be displayed.",
+    "presentation": [
+      "od 15. do 19.1 2024 v priestoroch bicyklového obchodu BAJKSERVIS (Nová 66) počas otváracích hodín 12:00-18.00)",
+      "20.1. 2024 v priestoroch penziónu Intenzíva od 9:00-10.45"
+    ],
+    "addPresentation": "Additional information in the form of a line field for it has not been filled in, it will not be displayed.",
+    "payments": [
+      "till 31.12.2023: 17€",
+      "from 01.01.2024 to 29.02.2024: 27€",
+      "from 01.01.2024 to 29.02.2025: 37€"
+    ],
+    "addPayments": "Additional Information. Can be specified if necessary.",
+    "categories": {
+      "ženy": {
+        "A": "do 29 rokov",
+        "B": "30 - 39 rokov",
+        "C": "40+ rokov"
+      },
+      "muži": {
+        "D": "do 18 rokov",
+        "E": "19 - 29 rokov",
+        "F": "30 - 39 rokov",
+        "G": "40 - 49 rokov",
+        "H": "50+ rokov"
+      }
+    },
+    "addCategories": "Additional information in the form of a line/ whole paragraph can be located here. If the field for it has not been filled in, it will not be displayed."
+  },
+
+
+  {
+    "name": "STUPAVA RUN MARATHON",
+    "place": "Stupava",
+    "variant": "",
+    "type": "RUN",
+    "date": "2024-01-27",
+    "time": "09:30",
+    "length": ["10", "25"],
+    "measurement": "km",
+    "height difference": "170",
+    "start point": "Stupava, Penzión INTENZÍVA - BAJKSERVIS (Nová ulica 66)"
+  },
+  {
+    "name": "STUPAVA MTB MARATHON",
+    "place": "Stupava",
+    "variant": "",
+    "type": "MTB",
+    "date": "2024-01-27",
+    "time": "11:30",
+    "length": ["25"],
+    "measurement": "km",
+    "height difference": "500",
+    "start point": "Stupava, Penzión INTENZÍVA - BAJKSERVIS (Nová ulica 66)"
+  },
+
+  {
+    "id": 3,
+    "name": "STUPAVA MTB MARATHON",
+    "place": "Stupava",
+    "variant": "",
+    "type": "MTB",
+    "date": "2024-09-14",
+    "time": "09:00",
+    "length": ["25", "42", "78"],
+    "measurement": "km",
+    "height difference": "500",
+    "start point": "Stupava, Penzión INTENZÍVA - BAJKSERVIS (Nová ulica 66)"
+  },
+
+  {
+    "id": 4,
+    "name": "BYSTRICA MTB MARATHON",
+    "place": "Bystrica",
+    "variant": "",
+    "type": "RUN",
+    "date": "2024-09-15",
+    "time": "09:30",
+    "length": ["11"],
+    "measurement": "km",
+    "height difference": "220",
+    "start point": "Stupava, Penzión INTENZÍVA - BAJKSERVIS (Nová ulica 66)"
+  },
+
+  {
+    "id": 5,
+    "name": "STUPAVA KOMBINÁCIA MTB & RUN MARATHON",
+    "place": "Stupava",
+    "variant": "KOMBINÁCIA",
+    "type": "MTB & RUN",
+    "date": "2024-09-15",
+    "time": "08:45",
+    "length": ["11"],
+    "measurement": "km",
+    "height difference": "220",
+    "start point": "Stupava, Penzión INTENZÍVA - BAJKSERVIS (Nová ulica 66)"
+  },
+  {
+    "id": 6,
+    "place": "Stupava",
+    "variant": "ŠKODA FAMILY",
+    "type": "MTB",
+    "date": "2024-09-15",
+    "time": "12:00",
+    "length": ["7"],
+    "measurement": "km",
+    "height difference": "220",
+    "start point": "Stupava, Penzión INTENZÍVA - BAJKSERVIS (Nová ulica 66)"
+  },
+  {
+    "id": 7,
+    "place": "Stupava",
+    "variant": "JUNIOR",
+    "type": "MTB",
+    "date": "2024-09-15",
+    "time": "13:00",
+    "length": ["1.6", "3.2", "4.8"],
+    "measurement": "km",
+    "height difference": "220",
+    "start point": "Stupava, Penzión INTENZÍVA - BAJKSERVIS (Nová ulica 66)"
+  },
+  {
+    "id": 8,
+    "place": "Stupava",
+    "variant": "Detský cyklomaratónik",
+    "type": "MTB",
+    "date": "2024-09-15",
+    "time": "13:00",
+    "length": ["100", "400", "800", "1200"],
+    "measurement": "m",
+    "height difference": "220",
+    "start point": "Stupava, Penzión INTENZÍVA - BAJKSERVIS (Nová ulica 66)"
+  },
+
+
+
+  {
+    "mainSponsors": [ 
+      {
+        "linkSite": "https://bratislavskykraj.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53481657622_ab27baf742_m.jpg"
+      },
+      {
+        "linkSite": "https://www.stupava.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53483032603_ca0e1f3398_m.jpg"
+      },
+      {
+        "linkSite": "https://bajkservis.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53482891111_4f10b4ae3c_m.jpg"
+      },
+      {
+        "linkSite": "https://www.faxcopy.sk/",
+        "linkImage": "https://live.staticflickr.com/65535/53484186791_5753c7de1f_m.jpg"
+      },
+      {
+        "linkSite": "https://www.skoda-auto.sk/",
+        "linkImage": "https://live.staticflickr.com/65535/53484347996_26c8066e92_k.jpg"
+      }
+    ]
+  }
+
+]

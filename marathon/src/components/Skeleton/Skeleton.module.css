@@ -1,0 +1,21 @@
+.skeleton {
+  width: 100%;
+  height: 25dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-style: italic;
+  color: rgba(36, 48, 59, 0.953);
+  animation: dynamic .5s linear infinite alternate;
+  margin-bottom: 20px;
+}
+
+@keyframes dynamic {
+  from {
+    background-color: rgb(103, 133, 162);
+  }
+  to {
+    background-color: rgba(122, 156, 188, 0.953);
+  }
+}

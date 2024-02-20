@@ -1,0 +1,68 @@
+.footer {
+  background-image: linear-gradient(180deg, rgb(51, 74, 94) 10%, rgb(26, 55, 81) 80%);
+}
+
+.wrapper {
+  max-width: 1440px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  padding: 40px 0;
+}
+
+.title {
+  font-family: Roboto;
+  font-size: 32px;
+  font-weight: 700;
+  color: rgb(46, 61, 84);
+  align-self: center;
+}
+
+.mailContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.mailItem {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  align-items: center;
+}
+
+.name {
+  font-family: Roboto;
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.741);
+  font-weight: 700;
+}
+
+.mailto {
+  text-decoration: none;
+  color: rgba(120, 140, 156, 0.903);
+  font-size: 20px;
+}
+
+.text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.columnTitle {
+  font-size: 20px;
+  line-height: 35px;
+  color: rgba(255, 255, 255, 0.741);
+}
+
+.columnItem {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: Roboto;
+  font-weight: bold;
+  color: rgba(120, 140, 156, 0.903);
+}

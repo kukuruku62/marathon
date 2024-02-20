@@ -1,0 +1,154 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1440px;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 0 10px;
+  }
+}
+
+.container {
+  width: 50%;
+  display: grid;
+  grid-template-rows: minmax(30vh, auto);
+
+  @media (max-width: 1200px) {
+    width: 70%;
+  }
+
+  @media (max-width: 950px) {
+    width: 90%;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.titlesList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  margin: 10px auto;
+  color: rgba(39, 58, 98, 0.863);
+
+  @media (max-width: 580px) {
+    font-size: 32px;
+  }
+}
+
+.subtitle {
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 10px;
+  color: rgba(39, 58, 98, 0.863);
+  text-transform: uppercase;
+}
+
+.textError {
+  color: #bc3b4f;
+  font-size: 14px;
+  &::before {
+    display: inline;
+    content: "⚠ ";
+  }
+}
+
+.fieldWrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  letter-spacing: 1px;
+}
+
+.formWrapper {
+  margin: 0 auto;
+  padding: 20px 0 50px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  width: 100%;
+
+  h4 {
+    align-self: center;
+    color: #8f1a2b;
+    font-weight: 400;
+    
+    @media (max-width: 580px) {
+      font-size: 14px;
+    }
+  }
+}
+
+.input {
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid rgba(90, 95, 105, 0.523);
+  padding: 3px;
+}
+
+.inputSubmit {
+  border-radius: 4px;
+  background: rgba(239, 51, 63);
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 10px;
+
+  &:hover {
+    transition: 0.2s all;
+    background: rgb(182, 35, 44);
+  }
+
+  &:disabled {
+    background: rgba(239, 51, 63, 0.685);
+  }
+}
+
+.wrapperRadioBtns {
+  display: flex;
+  justify-content: flex-start;
+  column-gap: 10%;
+}
+
+.radioWrapper {
+  display: flex;
+  column-gap: 10px;
+}
+
+.listDescroptionEvent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+
+  li {
+    display: flex;
+    column-gap: 5px;
+    align-items: baseline;
+    color: rgba(39, 58, 98, 0.863);
+    font-size: large;
+
+    h3 {
+      font-size: 16px;
+    }
+  }
+}
