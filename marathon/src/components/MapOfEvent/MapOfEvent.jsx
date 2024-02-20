@@ -2,6 +2,8 @@ import React from "react";
 
 import { MapContainer, TileLayer, Marker, Tooltip, Polyline } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import "leaflet/dist/images/marker-shadow.png";
+import "leaflet/dist/images/marker-icon-2x.png";
 
 import styles from "./MapOfEvent.module.scss";
 
