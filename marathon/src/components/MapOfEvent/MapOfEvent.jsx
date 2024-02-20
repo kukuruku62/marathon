@@ -1,6 +1,6 @@
 import React from "react";
 
-import { MapContainer, TileLayer, Marker, Tooltip, Polyline } from "react-leaflet";
+
 import "leaflet/dist/leaflet.css";
 import L from 'leaflet';
 import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
@@ -13,6 +13,7 @@ L.Icon.Default.mergeOptions({
     iconRetinaUrl: markerIcon2x.src,
     shadowUrl: markerShadow.src,
 })
+import { MapContainer, TileLayer, Marker, Tooltip, Polyline } from "react-leaflet";
 
 import styles from "./MapOfEvent.module.scss";
 
