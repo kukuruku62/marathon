@@ -21,11 +21,11 @@ export const About = ({dateOfNextEvent, firstEvent}) => {
                   Зарегистрироваться
                 </a>
               </li>
-              <li className={styles.linksBlock__link_wrapper}>
+              {/* <li className={styles.linksBlock__link_wrapper}>
                 <a className={styles.linksBlock__link} href="">
                   Посмотреть расписание
                 </a>
-              </li>
+              </li> */}
               <li className={styles.linksBlock__link_wrapper}>
                 <a className={styles.linksBlock__link} href="">
                   Поддержать проект

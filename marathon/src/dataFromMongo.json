@@ -1,0 +1,388 @@
+[
+  {
+    "name": "Stupava winter",
+    "place": "Stupava",
+    "participants": [
+      {
+        "firstName": "Nuke",
+        "lastName": "Ado",
+        "age": "44",
+        "gender": "Zena"
+      },
+      {
+        "firstName": "Porks",
+        "lastName": "Dart",
+        "age": "34",
+        "gender": "Žena",
+        "email": "example@example.com",
+        "distance": "10 km"
+      }
+    ],
+    "type": "RUN",
+    "dateOfEvent": "2024-10-25",
+    "addDate": "There may be additional information here",
+    "timeOfStartEvent": "11:30",
+    "distances": ["10"],
+    "measurement": "km",
+    "startpoint": "Bajkservis Stupava",
+    "registration": ["09.12.26 zdcsdsdfsdsdfsd ", "342 sdsfdefefe - fdgd"],
+    "addRegistration": "There may be additional information here",
+    "presentation": [
+      "od 15. do 19.1 2024 v priestoroch bicyklového obchodu BAJKSERVIS (Nová 66) počas otváracích hodín 12:00-18.00)",
+      "20.1. 2024 v priestoroch penziónu Intenzíva od 9:00-10.45"
+    ],
+    "addPresentation": "There may be additional information here",
+    "payments": [
+      "till 31.12.2023: 17€",
+      "from 01.01.2024 to 29.02.2024: 27€",
+      "from 01.01.2024 to 29.02.2025: 37€"
+    ],
+    "addPayments": "There may be additional information here",
+    "addCategories": "There may be additional information here",
+    "__v": 0,
+    "categoriesMale": [
+      "D: do 18 rokov",
+      "E: 19 - 29 rokov",
+      "F: 30 - 39 rokov",
+      "G: 40 - 49 rokov",
+      "H: 50+ rokov"
+    ],
+    "categoriesFemale": ["A: do 29 rokov", "B: 30 - 39 rokov", "C: 40+ rokov"],
+    "sponsorsEvent": [
+      {
+        "linkSite": "https://bratislavskykraj.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53481657622_ab27baf742_m.jpg"
+      },
+      {
+        "linkSite": "https://www.stupava.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53483032603_ca0e1f3398_m.jpg"
+      },
+      {
+        "linkSite": "https://bajkservis.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53482891111_4f10b4ae3c_m.jpg"
+      },
+      {
+        "linkSite": "https://www.faxcopy.sk/",
+        "linkImage": "https://live.staticflickr.com/65535/53484186791_5753c7de1f_m.jpg"
+      }
+    ],
+    "addTimeStartEvent": "There may be additional information here",
+    "paymentsNew": [
+      {
+        "paymentDate": "2024-01-20",
+        "price": "16"
+      },
+      {
+        "paymentDate": "2024-05-25",
+        "price": "26"
+      },
+      {
+        "paymentDate": "2024-07-20",
+        "price": "30"
+      }
+    ]
+  },
+
+  {
+    "name": "Stupava Best MTB winter",
+    "place": "Stupava",
+    "participants": [
+      {
+        "firstName": "Mayro",
+        "lastName": "Kort",
+        "age": "33",
+        "gender": "Muž",
+        "email": "example@example.com",
+        "distance": "25 km"
+      },
+      {
+        "firstName": "Fgf",
+        "lastName": "Dfgdf",
+        "age": "33",
+        "gender": "Muž",
+        "email": "example@example.com",
+        "distance": "10 km"
+      }
+    ],
+    "type": "MTB",
+    "dateOfEvent": "2024-03-09",
+    "addDate": "There may be additional information here",
+    "timeOfStartEvent": "11:30",
+    "distances": ["10", "25"],
+    "measurement": "km",
+    "startpoint": "Bajkservis Stupava",
+    "registration": ["09.12.26 zdcsdsdfsdsdfsd ", "342 sdsfdefefe - fdgd"],
+    "addRegistration": "There may be additional information here",
+    "presentation": [
+      "od 15. do 19.1 2024 v priestoroch bicyklového obchodu BAJKSERVIS (Nová 66) počas otváracích hodín 12:00-18.00)",
+      "20.1. 2024 v priestoroch penziónu Intenzíva od 9:00-10.45"
+    ],
+    "addPresentation": "There may be additional information here",
+    "payments": [
+      "till 31.12.2023: 17€",
+      "from 01.01.2024 to 29.02.2024: 27€",
+      "from 01.01.2024 to 29.02.2025: 37€"
+    ],
+    "addPayments": "There may be additional information here",
+    "addCategories": "There may be additional information here",
+    "__v": 0,
+    "categoriesFemale": [
+      "D: do 18 rokov",
+      "E: 19 - 29 rokov",
+      "F: 30 - 39 rokov",
+      "G: 40 - 49 rokov",
+      "H: 50+ rokov"
+    ],
+    "categoriesMale": ["A: do 29 rokov", "B: 30 - 39 rokov", "C: 40+ rokov"],
+    "sponsorsEvent": [
+      {
+        "linkSite": "https://bratislavskykraj.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53481657622_ab27baf742_m.jpg"
+      },
+      {
+        "linkSite": "https://www.stupava.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53483032603_ca0e1f3398_m.jpg"
+      },
+      {
+        "linkSite": "https://bajkservis.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53482891111_4f10b4ae3c_m.jpg"
+      },
+      {
+        "linkSite": "https://www.faxcopy.sk/",
+        "linkImage": "https://live.staticflickr.com/65535/53484186791_5753c7de1f_m.jpg"
+      }
+    ],
+    "addTimeStartEvent": "There may be additional information here",
+    "paymentsNew": [
+      {
+        "paymentDate": "2024-03-20",
+        "price": "120"
+      }
+    ]
+  },
+
+  {
+    "_id": {
+      "$oid": "65bf72bdc77cd2563722b1a2"
+    },
+    "name": "Stupava Best RUN JAR",
+    "place": "Stupava",
+    "participants": [
+      {
+        "firstName": "Uuu",
+        "lastName": "Eee",
+        "age": "4",
+        "gender": "Žena",
+        "email": "example@example.com",
+        "distance": "1200 m",
+        "_id": {
+          "$oid": "65c767964155bd09b85468d5"
+        }
+      }
+    ],
+    "type": "MTB",
+    "dateOfEvent": "2024-04-25",
+    "addDate": "There may be additional information here",
+    "timeOfStartEvent": "11:30",
+    "distances": ["100", "400", "800", "1200"],
+    "measurement": "m",
+    "startpoint": "Bajkservis Stupava",
+    "registration": ["09.12.26 zdcsdsdfsdsdfsd ", "342 sdsfdefefe - fdgd"],
+    "addRegistration": "There may be additional information here",
+    "presentation": [
+      "od 15. do 19.1 2024 v priestoroch bicyklového obchodu BAJKSERVIS (Nová 66) počas otváracích hodín 12:00-18.00)",
+      "20.1. 2024 v priestoroch penziónu Intenzíva od 9:00-10.45"
+    ],
+    "addPresentation": "There may be additional information here",
+    "payments": [
+      "till 31.12.2023: 17€",
+      "from 01.01.2024 to 29.02.2024: 27€",
+      "from 01.01.2024 to 29.02.2025: 37€"
+    ],
+    "addPayments": "There may be additional information here",
+    "addCategories": "There may be additional information here",
+    "__v": 0,
+    "categoriesFemale": ["A: do 29 rokov", "B: 30 - 39 rokov", "C: 40+ rokov"],
+    "categoriesMale": [
+      "D: do 18 rokov",
+      "E: 19 - 29 rokov",
+      "F: 30 - 39 rokov",
+      "G: 40 - 49 rokov",
+      "H: 50+ rokov"
+    ],
+    "sponsorsEvent": [
+      {
+        "linkSite": "https://bratislavskykraj.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53481657622_ab27baf742_m.jpg"
+      },
+      {
+        "linkSite": "https://www.stupava.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53483032603_ca0e1f3398_m.jpg"
+      },
+      {
+        "linkSite": "https://bajkservis.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53482891111_4f10b4ae3c_m.jpg"
+      },
+      {
+        "linkSite": "https://www.faxcopy.sk/",
+        "linkImage": "https://live.staticflickr.com/65535/53484186791_5753c7de1f_m.jpg"
+      }
+    ],
+    "addTimeStartEvent": "There may be additional information here"
+  },
+
+  {
+    "_id": {
+      "$oid": "65bf732ac77cd2563722b1a5"
+    },
+    "name": "Stupava Skoda marathon",
+    "place": "Stupava",
+    "participants": [
+      {
+        "firstName": "Jane",
+        "lastName": "Smith",
+        "age": "25",
+        "gender": "Female",
+        "email": "test3@events.com",
+        "_id": {
+          "$oid": "65c4ffd4be4490b198c25ff8"
+        }
+      },
+      {
+        "firstName": "Alice",
+        "lastName": "Johnson",
+        "age": "35",
+        "gender": "Female",
+        "email": "test4@events.com",
+        "_id": {
+          "$oid": "65c4ffe0be4490b198c25fff"
+        }
+      }
+    ],
+    "type": "RUN",
+    "dateOfEvent": "2024-04-25",
+    "addDate": "There may be additional information here",
+    "timeOfStartEvent": "17:30",
+    "distances": [
+      "20",
+      "25"
+    ],
+    "measurement": "km",
+    "startpoint": "Bajkservis Stupava",
+    "registration": [
+      "09.12.26 zdcsdsdfsdsdfsd ",
+      "342 sdsfdefefe - fdgd"
+    ],
+    "addRegistration": "There may be additional information here",
+    "presentation": [
+      "od 15. do 19.1 2024 v priestoroch bicyklového obchodu BAJKSERVIS (Nová 66) počas otváracích hodín 12:00-18.00)",
+      "20.1. 2024 v priestoroch penziónu Intenzíva od 9:00-10.45"
+    ],
+    "addPresentation": "There may be additional information here",
+    "payments": [
+      "till 31.12.2023: 17€",
+      "from 01.01.2024 to 29.02.2024: 27€",
+      "from 01.01.2024 to 29.02.2025: 37€"
+    ],
+    "addPayments": "There may be additional information here",
+    "addCategories": "There may be additional information here",
+    "__v": 0,
+    "categoriesFemale": [
+      "A: do 29 rokov",
+      "B: 30 - 39 rokov",
+      "C: 40+ rokov"
+    ],
+    "categoriesMale": [
+      "D: do 18 rokov",
+      "E: 19 - 29 rokov",
+      "F: 30 - 39 rokov",
+      "G: 40 - 49 rokov",
+      "H: 50+ rokov"
+    ],
+    "sponsorsEvent": [
+      {
+        "linkSite": "https://bratislavskykraj.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53481657622_ab27baf742_m.jpg"
+      },
+      {
+        "linkSite": "https://www.stupava.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53483032603_ca0e1f3398_m.jpg"
+      },
+      {
+        "linkSite": "https://bajkservis.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53482891111_4f10b4ae3c_m.jpg"
+      },
+      {
+        "linkSite": "https://www.faxcopy.sk/",
+        "linkImage": "https://live.staticflickr.com/65535/53484186791_5753c7de1f_m.jpg"
+      }
+    ],
+    "addTimeStartEvent": "There may be additional information here"
+  },
+
+  {
+    "_id": {
+      "$oid": "65c0c88b9dba471bb19403e8"
+    },
+    "name": "TEST NO DISPLAY",
+    "place": "TEST NO DISPLAY",
+    "variant": "",
+    "participants": [],
+    "type": "RUN",
+    "dateOfEvent": "2024-01-01",
+    "addDate": "There may be additional information here",
+    "timeOfStartEvent": "11:30",
+    "distances": [],
+    "measurement": "km",
+    "startpoint": "Bajkservis Stupava",
+    "registration": [
+      "09.12.26 zdcsdsdfsdsdfsd ",
+      "342 sdsfdefefe - fdgd"
+    ],
+    "addRegistration": "There may be additional information here",
+    "presentation": [
+      "od 15. do 19.1 2024 v priestoroch bicyklového obchodu BAJKSERVIS (Nová 66) počas otváracích hodín 12:00-18.00)",
+      "20.1. 2024 v priestoroch penziónu Intenzíva od 9:00-10.45"
+    ],
+    "addPresentation": "There may be additional information here",
+    "payments": [
+      "till 31.12.2023: 17€",
+      "from 01.01.2024 to 29.02.2024: 27€",
+      "from 01.01.2024 to 29.02.2025: 37€"
+    ],
+    "addPayments": "There may be additional information here",
+    "addCategories": "There may be additional information here",
+    "__v": 0,
+    "categoriesMale": [
+      "D: do 18 rokov",
+      "E: 19 - 29 rokov",
+      "F: 30 - 39 rokov",
+      "G: 40 - 49 rokov",
+      "H: 50+ rokov"
+    ],
+    "categoriesFemale": [
+      "A: do 29 rokov",
+      "B: 30 - 39 rokov",
+      "C: 40+ rokov"
+    ],
+    "sponsorsEvent": [
+      {
+        "linkSite": "https://bratislavskykraj.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53481657622_ab27baf742_m.jpg"
+      },
+      {
+        "linkSite": "https://www.stupava.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53483032603_ca0e1f3398_m.jpg"
+      },
+      {
+        "linkSite": "https://bajkservis.sk",
+        "linkImage": "https://live.staticflickr.com/65535/53482891111_4f10b4ae3c_m.jpg"
+      },
+      {
+        "linkSite": "https://www.faxcopy.sk/",
+        "linkImage": "https://live.staticflickr.com/65535/53484186791_5753c7de1f_m.jpg"
+      }
+    ],
+    "addTimeStartEvent": "There may be additional information here"
+  }
+]

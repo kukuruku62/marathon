@@ -8,7 +8,6 @@ export const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.wrapper}>
         <section className={styles.content}>
-          {/* <h2 className={styles.title}>Kontakt</h2> */}
           <div className={styles.mailContainer}>
             <div className={styles.mailItem}>
               <p className={styles.name}>Organizátor: BJKSERVIS</p>
