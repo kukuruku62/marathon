@@ -8,6 +8,6 @@ router.post("/create-checkout-session", createCheckout);
 
 router.get("/session-status", sessionStatus);
 
-router.post('/webhook', handleStripeWebhookEvent)
+router.post('/webhook', express.raw({type: 'application/json'}), handleStripeWebhookEvent)
 
 export { router as stripeRouters };
