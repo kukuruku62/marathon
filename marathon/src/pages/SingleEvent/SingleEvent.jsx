@@ -45,11 +45,11 @@ export const SingleEvent = () => {
         <>
           <div className={styles.content}>
             <h2 className={styles.title}>{name}</h2>
-            <Link to={`/events/${_id}/registration`} className={styles.linkRegistration} target="_blank"> Registrácia </Link>
+            <Link to={`/events/${_id}/registration`} className={styles.linkRegistration} > Registrácia </Link>
 
             {sponsorsEvent && <Sponsors sponsorsEvent={sponsorsEvent} />}
 
-            <Link to={`/events/${_id}/participants`} className={styles.linkParticipants} target="_blank">
+            <Link to={`/events/${_id}/participants`} className={styles.linkParticipants} >
               <h3>Zoznam prihlásených účastníkov</h3>
             </Link>
 

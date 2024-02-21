@@ -14,7 +14,7 @@ export const Return = () => {
     const urlParams = new URLSearchParams(queryString);
     const sessionId = urlParams.get("session_id");
 
-    fetch(`https://stupava-marathon.vercel.app/api/stripe/session-status?session_id=${sessionId}`)
+    fetch(`https://marathon-delta.vercel.app/api/stripe/session-status?session_id=${sessionId}`)
       .then((res) => res.json())
       .then((data) => {
         setStatus(data.status);
