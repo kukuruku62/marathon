@@ -1,9 +1,12 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { useTimer } from "../../hooks/useTimer";
 
 import styles from "./Timer.module.scss";
 
-export const Timer = ({ dateAndTimeFirstEvent }) => {
+
+export const Timer = () => {
+  const dateAndTimeFirstEvent = useSelector((state) => state.events.dateAndTimeFirstEvent);
   const { timerDays, timerHours, timerMinutes, isReady } = useTimer(dateAndTimeFirstEvent);
 
   return (
