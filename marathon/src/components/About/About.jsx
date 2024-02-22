@@ -29,7 +29,7 @@ export const About = () => {
                 <Link className={styles.link}>Registrácia</Link>
               </li>
               <li className={styles.linkWrapper}>
-                <Link className={styles.link}>Spojte sa s nami</Link>
+                <Link className={styles.link}>Kontakt</Link>
               </li>
               <li className={styles.linkWrapper}>
                 <Link className={styles.link}>Podpor nás</Link>
