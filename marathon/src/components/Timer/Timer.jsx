@@ -14,16 +14,16 @@ export const Timer = () => {
       {isReady && (
         <>
           <h3 className={styles.title}>ĎALŠÍ ŠTART</h3>
-          <div className={styles.timerContainer}>
-            <div className={styles.timerUnitWrapper}>
+          <div className={styles.timerContent}>
+            <div className={styles.timerItem}>
               <span className={styles.timerData}>{timerDays}</span>
               <span className={styles.timerText}>dni</span>
             </div>
-            <div className={styles.timerUnitWrapper}>
+            <div className={styles.timerItem}>
               <span className={styles.timerData}>{timerHours}</span>
               <span className={styles.timerText}>hodiny</span>
             </div>
-            <div className={styles.timerUnitWrapper}>
+            <div className={styles.timerItem}>
               <span className={styles.timerData}>{timerMinutes}</span>
               <span className={styles.timerText}>minúty</span>
             </div>
