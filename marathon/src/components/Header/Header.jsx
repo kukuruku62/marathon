@@ -24,19 +24,19 @@ export const Header = () => {
     <header className={styles.header}>
       <div className={styles.wrapper}>
         <div className={styles.inner}>
-          <div className={styles.content}>
-            <Link to="/">
-              <FlagSvg className={styles.flag} alt="Vlajka" />
+            <Link to="/" onClick={() => setIsBurgerWindow(false)}>
+              <div className={styles.content}>
+                <FlagSvg className={styles.flag} alt="Vlajka" />
+                <h2 className={styles.headerTitle}>STUPAVA MARATÓN</h2>
+              </div>
             </Link>
-            <h2 className={styles.headerTitle}>STUPAVA MARATÓN</h2>
-          </div>
         </div>
         <div className={styles.burgerBtnContainer} onClick={() => setIsBurgerWindow(!isBurgerWindow)}>
           <div className={styles.burgerBtn}>
             {Array.from({length: 3}).map((line, index) => <span key={index} className={isBurgerWindow ? styles.active : ''}></span>)}
           </div>
         </div>
-        {createPortal(
+        { isBurgerWindow && createPortal(
           <BurgerMenu isBurgerWindow={isBurgerWindow} setIsBurgerWindow={setIsBurgerWindow} />,
           document.body
         )}

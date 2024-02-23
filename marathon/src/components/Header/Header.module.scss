@@ -33,7 +33,10 @@
 
 .inner {
   display: flex;
-
+  
+  a {
+    text-decoration: none;
+  }
   @media (max-width: 650px) {
     align-items: center;
     justify-content: flex-start;
