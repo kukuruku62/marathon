@@ -15,6 +15,8 @@ import { Registration } from "./pages/Registration/Registration.jsx";
 import { Participants } from "./pages/Participants/Participants.jsx";
 import { CheckoutForm } from "./components/Stripe/CheckoutForm.jsx";
 import { Return } from "./components/Stripe/Return.jsx";
+import { Donate } from "./pages/Donate/Donate.jsx";
+import { Contact } from "./pages/Contact/Contact.jsx";
 
 
 const router = createBrowserRouter(
@@ -24,6 +26,8 @@ const router = createBrowserRouter(
       <Route path="events/:id" element={<SingleEvent />} />
       <Route path="events/:id/registration" element={<Registration />} />
       <Route path="events/:id/participants" element={<Participants />} />
+      <Route path="donate" element={<Donate />} />
+      <Route path="contact" element={<Contact />} />
 
       <Route path="payment/checkout" element={<CheckoutForm />} />
       <Route path="payment/return" element={<Return />} />
