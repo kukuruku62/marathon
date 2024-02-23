@@ -100,14 +100,15 @@
   margin: 0 auto;
   cursor: pointer;
 
-  @media (max-width: 1000px) {
-    grid-template-rows: auto auto auto;
-    grid-template-columns: auto;
-    row-gap: 15px;
+  @media (max-width: 1200px) {
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 20px;
+    row-gap: 10px;
   }
 
   @media (max-width: 768px) {
-    padding: 10px;
+    padding: 40px 10px;
   }
 }
 
@@ -141,6 +142,21 @@
   font-style: italic;
   color: rgb(255, 255, 255);
   width: calc((100% - 10%) / 3);
+  order: 0;
+
+  @media (max-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  @media (max-width: 1000px) {
+    font-size: 32px;
+  }
+
+  @media (max-width: 380px) {
+    font-size: 28px;
+  }
 }
 
 .date,
@@ -148,7 +164,14 @@
   font-size: 40px;
   font-weight: 700;
   color: white;
-  // place-self:  end;
+
+  @media (max-width: 1000px) {
+    font-size: 32px;
+  }
+
+  @media (max-width: 380px) {
+    font-size: 28px;
+  }
 }
 
 .distanceContainer {
@@ -157,13 +180,10 @@
   justify-content: center;
   width: calc((100% - 10%) / 3);
 
-  @media (max-width: 1200px) {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  @media (max-width: 1000px) {
-    flex-direction: row;
+  @media (max-width: 1200px) {
+    width: 100%;
+    order: 1;
   }
 
   .distance:not(:nth-last-of-type(2)) {
@@ -171,16 +191,6 @@
       content: "";
       border-right: 2px rgba(217, 217, 217, 0.61) solid;
       margin: 0 10px;
-
-      @media (max-width: 1200px) {
-        border-right: none;
-        margin: 0;
-      }
-
-      @media (max-width: 1000px) {
-        border-right: 2px rgba(217, 217, 217, 0.61) solid;
-        margin: 0 10px;
-      }
     }
   }
 
@@ -192,8 +202,12 @@
     display: flex;
     align-self: center;
 
-    @media (max-width: 1200px) {
-      margin: 0;
+    @media (max-width: 1000px) {
+      font-size: 32px;
+    }
+
+    @media (max-width: 380px) {
+      font-size: 28px;
     }
   }
 }
@@ -203,9 +217,18 @@
   flex-direction: column;
   align-items: flex-end;
   width: calc((100% - 10%) / 3);
+
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 20px;
+  }
 }
 
-@media (hover: hover) {
+// TODO: CHECK HOVER ON MOBILE
+// @media (hover: hover) {
   .gridItem {
     &:hover:before {
       transform: scale(1.05);
@@ -261,4 +284,4 @@
       background-position: center 60%;
     }
   }
-}
+// }
