@@ -4,13 +4,13 @@ import styles from "./SingleEvent.module.scss"
 
 export const Item = ({title, prop, additionalInfo, propArr, measurement, isPartOfCategory}) => {
   return (
-    <li className={styles.item}>
+    <ul className={styles.item}>
       {!isPartOfCategory && <h3 className={styles.itemTitle}>{title}</h3>}
       {isPartOfCategory && <h4 className={styles.itemTitleCategory}>{title}</h4>}
-      {prop && <p className={styles.itemText}>{prop}</p>}
-      {propArr && measurement && propArr.map((item, index) => <p className={styles.itemText} key={index}>{`${item} ${measurement}.`}</p>)}
-      {propArr && !measurement && propArr.map((item, index) => <p className={styles.itemText} key={index}>{`${item}.`}</p>)}
-      {additionalInfo && <p className={styles.itemText}>{`* ${additionalInfo}`}</p>}
-    </li>
+      {prop && <li className={styles.itemText}>{prop}</li>}
+      {propArr && measurement && propArr.map((item, index) => <li className={styles.itemText} key={index}>{`${item} ${measurement}.`}</li>)}
+      {propArr && !measurement && propArr.map((item, index) => <li className={styles.itemText} key={index}>{`${item}.`}</li>)}
+      {additionalInfo && <li className={styles.itemText}>{`* ${additionalInfo}`}</li>}
+    </ul>
   );
 };

@@ -10,6 +10,10 @@
   justify-content: center;
   flex-direction: column;
   padding: 0 50px;
+
+  @media (max-width: 1000px) {
+    padding: 0px;
+  }
 }
 
 .linkRegistration {
@@ -18,7 +22,6 @@
   font-weight: 600;
   color: rgb(255, 255, 255);
   align-self: center;
-  align-content: center;
   justify-content: center;
   width: 80%;
   padding: 10px;
@@ -27,6 +30,10 @@
   border-radius: 5px;
   text-decoration: none;
   margin-bottom: 20px;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
 }
 
 .title {
@@ -38,12 +45,8 @@
   margin: 20px 0px;
   text-transform: uppercase;
 
-  @media (max-width: 850px) {
-    font-size: 50px;
-  }
-
   @media (max-width: 650px) {
-    font-size: 42px;
+    font-size: 24px;
   }
 
   @media (max-width: 450px) {
@@ -85,6 +88,7 @@
   display: flex;
   flex-direction: column;
   row-gap: 10px;
+
   .genderCategory {
     text-transform: capitalize;
   }
@@ -124,17 +128,30 @@
 
 .sponsorImg {
   max-height: 60px;
-  align-self: center;
+
+  @media (max-width: 450px) {
+    max-height: 50px;
+  }
 }
 
-.linkParticipants {
+.link {
   margin: 15px auto;
   text-decoration: none;
   list-style: none;
   font-size: 24px;
   color: rgba(39, 58, 98, 0.9);
 
-  h3 {
-    font-weight: 400;
+  &:hover {
+    color: rgba(39, 58, 98, 0.745);
+  }
+}
+
+.listParticipants {
+  padding: 15px 0;
+  font-weight: 600;
+  font-size: 24px;
+
+  @media (max-width: 420px) {
+    font-size: 20px;
   }
 }

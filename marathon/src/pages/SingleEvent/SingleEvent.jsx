@@ -1,5 +1,4 @@
 import React from "react";
-
 import { useParams, Link } from "react-router-dom";
 import styles from "./SingleEvent.module.scss";
 
@@ -9,6 +8,7 @@ import { Sponsors } from "./Sponsors.jsx";
 import { Item } from "./Item.jsx";
 import { Categories } from "./Categories.jsx";
 import { SkeletonBike } from "../../components/SkeletonBike/SkeletonBike.jsx";
+import { Price } from "./Price.jsx";
 
 
 export const SingleEvent = () => {
@@ -29,6 +29,7 @@ export const SingleEvent = () => {
     presentation,
     addPresentation,
     payments,
+    paymentsNew,
     addPayments,
     addCategories,
     categoriesFemale,
@@ -49,8 +50,8 @@ export const SingleEvent = () => {
 
             {sponsorsEvent && <Sponsors sponsorsEvent={sponsorsEvent} />}
 
-            <Link to={`/events/${_id}/participants`} className={styles.linkParticipants} >
-              <h3>Zoznam prihlásených účastníkov</h3>
+            <Link to={`/events/${_id}/participants`} className={styles.link} >
+              <h3 className={styles.listParticipants} > Zoznam prihlásených účastníkov</h3>
             </Link>
 
             <ul className={styles.listItems}>
@@ -62,7 +63,7 @@ export const SingleEvent = () => {
                                         categoriesMale={categoriesMale} 
                                         categoriesFemale={categoriesFemale} 
                                         additionalInfo={addCategories}/>
-              <Item title="Cena:" propArr={payments} additionalInfo={addPayments}/>
+              <Price title="Cena:" paymentsNew={paymentsNew}/>
               <Item title="Registrácia:" propArr={registration} additionalInfo={addRegistration}/>
               <Item title="Prezentácia:" propArr={presentation} additionalInfo={addPresentation}/>
             </ul>
