@@ -7,6 +7,11 @@ export const About = () => {
   const firstEvent = useSelector((state) => state.events.firstEvent);
   const dateOfNextEvent = useSelector((state) => state.events.dateOfNextEvent);
 
+  const listItemsMenu = [
+    { title: "Podporte nás", href: "/donate" },
+    { title: "Kontakt", href: "/contact" },
+  ];
+
   return (
     <section className={styles.slider}>
       <div className={styles.wrapper}>
@@ -23,17 +28,15 @@ export const About = () => {
           </p>
         </div>
         <div className={styles.linksBlock}>
-          <nav>
-            <ul>
-              <li className={styles.linkWrapper}>
-                <Link className={styles.link}>Registrácia</Link>
-              </li>
-              <li className={styles.linkWrapper}>
-                <Link className={styles.link}>Kontakt</Link>
-              </li>
-              <li className={styles.linkWrapper}>
-                <Link className={styles.link}>Podpor nás</Link>
-              </li>
+          <nav className={styles.navigation}>
+            <ul className={styles.listLinks}>
+              {listItemsMenu.map(({ title, href }, index) => (
+                <li key={index} className={styles.linkWrapper}>
+                  <Link className={styles.link} to={href}>
+                    {title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
