@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { createPortal } from "react-dom";
 import styles from "./Header.module.scss";
@@ -8,6 +8,17 @@ import FlagSvg from "../../assets/svg/flag.svg?react";
 
 export const Header = () => {
   const [isBurgerWindow, setIsBurgerWindow] = useState(false);
+
+  useEffect(() => {
+    if (isBurgerWindow) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "auto";
+    }
+    return () => {
+      document.body.style.overflowY = "auto";
+    };
+  }, [isBurgerWindow])
 
   return (
     <header className={styles.header}>
