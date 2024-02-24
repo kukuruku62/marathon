@@ -46,6 +46,7 @@ export const createCheckout = async (req, res) => {
           quantity: 1,
         },
       ],
+      // return_url: "http://localhost:5173/payment/return?session_id={CHECKOUT_SESSION_ID}",
       return_url: "https://marathon-two.vercel.app/payment/return?session_id={CHECKOUT_SESSION_ID}",
       automatic_tax: { enabled: false },
     });

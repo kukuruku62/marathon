@@ -14,6 +14,8 @@ export const CheckoutForm = () => {
 
   useEffect(() => {
     fetch("https://marathon-delta.vercel.app/api/stripe/create-checkout-session", {
+      // fetch("http://localhost:3002/api/stripe/create-checkout-session", {
+      
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -1,8 +1,8 @@
 import Event from "../models/Event.js";
 
 export const sortPriceByDate = async (id) => {
-  const result = await Event.findById(id).select("paymentsNew");
-  const dataResult = result.paymentsNew;
+  const result = await Event.findById(id).select("payments");
+  const dataResult = result.payments;
 
   const currentDate = new Date();
 

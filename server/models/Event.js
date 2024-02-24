@@ -68,8 +68,7 @@ const EventSchema = new mongoose.Schema (
     addRegistration: String,
     presentation: [String],
     addPresentation: String,
-    payments: [String],
-    paymentsNew: [{
+    payments: [{
       paymentDate: String,
       price: String
     }],
