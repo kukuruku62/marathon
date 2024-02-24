@@ -79,16 +79,24 @@ export const handleStripeWebhookEvent = async (req, response) => {
   let data = event.data.object;
 
   if (event.type === "checkout.session.completed") {
-    stripe.customers
-      .retrieve(data.customer)
-      .then(async (customer) => {
-        try {
-          await addPartisipantToDataBase(customer.metadata);
-        } catch (err) {
-          console.log(err);
-        }
-      })
-      .catch((err) => console.log(err.message));
+    try {
+      const customer = await stripe.customers.retrieve(data.customer);
+      await addPartisipantToDataBase(customer.metadata);
+    } catch (err) {
+      console.error(err);
+      response.status(500).send(`Internal Server Error: ${err.message}`);
+      return;
+    }
+    // stripe.customers
+      // .retrieve(data.customer)
+      // .then(async (customer) => {
+      //   try {
+      //     await addPartisipantToDataBase(customer.metadata);
+      //   } catch (err) {
+      //     console.log(err);
+      //   }
+      // })
+      // .catch((err) => console.log(err.message));
       
   }
 
