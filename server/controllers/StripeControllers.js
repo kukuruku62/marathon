@@ -47,7 +47,7 @@ export const createCheckout = async (req, res) => {
         },
       ],
       // return_url: "http://localhost:5173/payment/return?session_id={CHECKOUT_SESSION_ID}",
-      return_url: "https://marathon-two.vercel.app/payment/return?session_id={CHECKOUT_SESSION_ID}",
+      return_url: "https://marathon-front.vercel.app/payment/return?session_id={CHECKOUT_SESSION_ID}",
       automatic_tax: { enabled: false },
     });
     res.send({ clientSecret: session.client_secret });
@@ -65,7 +65,7 @@ export const sessionStatus = async (req, res) => {
   });
 };
 
-export const handleStripeWebhookEvent = (req, response) => {
+export const handleStripeWebhookEvent = async (req, response) => {
   const sig = req.headers["stripe-signature"];
   let event;
 
@@ -83,12 +83,13 @@ export const handleStripeWebhookEvent = (req, response) => {
       .retrieve(data.customer)
       .then(async (customer) => {
         try {
-          addPartisipantToDataBase(customer.metadata);
+          await addPartisipantToDataBase(customer.metadata);
         } catch (err) {
           console.log(err);
         }
       })
       .catch((err) => console.log(err.message));
+      
   }
 
   response.send();
