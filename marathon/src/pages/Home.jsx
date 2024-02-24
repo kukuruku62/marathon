@@ -11,10 +11,7 @@ import { Timer } from "../components/Timer/Timer.jsx";
 export const Home = () => {
   const dispatch = useDispatch();
   const status = useSelector((state) => state.events.status);
-  const firstEvent = useSelector((state) => state.events.firstEvent);
   const listEvents = useSelector((state) => state.events.listEvents);
-  const dateOfNextEvent = useSelector((state) => state.events.dateOfNextEvent);
-  const dateAndTimeFirstEvent = useSelector((state) => state.events.dateAndTimeFirstEvent);
   const listMainSponsors = useSelector((state) => state.events.listMainSponsors);
 
   useEffect(() => {
@@ -23,8 +20,8 @@ export const Home = () => {
 
   return (
     <>
-      <Timer dateAndTimeFirstEvent={dateAndTimeFirstEvent} />
-      <About firstEvent={firstEvent} dateOfNextEvent={dateOfNextEvent} />
+      <Timer />
+      <About />
       <Schedule status={status} listEvents={listEvents} />
       <Advertising listMainSponsors={listMainSponsors} />
     </>

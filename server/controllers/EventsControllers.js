@@ -99,7 +99,6 @@ export const postEvent = async (req, res) => {
       categoriesMale,
       categoriesFemale,
       addCategories,
-      paymentsNew,
     } = req.body;
 
     const newEvent = new Event({
@@ -120,7 +119,6 @@ export const postEvent = async (req, res) => {
       presentation,
       addPresentation,
       payments,
-      paymentsNew,
       addPayments,
       categoriesMale,
       categoriesFemale,
