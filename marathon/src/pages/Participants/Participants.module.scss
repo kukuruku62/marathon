@@ -30,6 +30,10 @@
 .subtitle {
   font-size: 24px;
   color: rgb(22, 80, 114);
+
+  @media (max-width: 580px) {
+    font-size: 16px;
+  }
 }
 
 .list {
@@ -38,10 +42,26 @@
   flex-direction: column;
   align-items: center;
   list-style: none;
-  color: green;
 }
 
 .itemList {
   align-self: baseline;
   color: rgb(0, 0, 0);
+}
+
+.noParticipants {
+  display: flex;
+  align-items: center;
+}
+
+.smile {
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+
+  @media (max-width: 580px) {
+    padding: 5px;
+    height: 30px;
+    width: 30px;
+  }
 }
