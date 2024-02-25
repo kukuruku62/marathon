@@ -5,6 +5,9 @@ import styles from "./Footer.module.scss";
 import InstagramIcon from "../../assets/svg/instagram.svg?react";
 import FacebookIcon from "../../assets/svg/facebook.svg?react";
 import StravaIcon from "../../assets/svg/strava.svg?react";
+import VisaIcon from "../../assets/svg/visa.svg?react";
+import MastercardIcon from "../../assets/svg/mastercard.svg?react";
+import StripeIcon from "../../assets/svg/stripe.svg?react";
 
 
 export const Footer = () => {
@@ -57,6 +60,11 @@ export const Footer = () => {
                   luca@stupavskymaraton.sk
                 </Link>
               </li>
+            </ul>
+            <ul className={styles.cards}>
+              <li className={styles.card}><VisaIcon /></li>
+              <li className={styles.card}><MastercardIcon /></li>
+              <li className={styles.card}><StripeIcon /></li>
             </ul>
           </div>
           <div className={styles.listOrganizers}>
