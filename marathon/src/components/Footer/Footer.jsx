@@ -1,60 +1,94 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./Footer.module.scss";
-import { IconFb } from "../IconFb/IconFb";
+
+import InstagramIcon from "../../assets/svg/instagram.svg?react";
+import FacebookIcon from "../../assets/svg/facebook.svg?react";
+import StravaIcon from "../../assets/svg/strava.svg?react";
 
 
 export const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.wrapper}>
-        <section className={styles.content}>
-          <div className={styles.mailContainer}>
-            <div className={styles.mailItem}>
-              <p className={styles.name}>Organizátor: BJKSERVIS</p>
-              <a className={styles.mailto} target="_blank" href="mailto:inf@stupavskymaraton.sk">
-                inf@stupavskymaraton.sk
-              </a>
+        <div className={styles.inner}>
+          <div className={styles.contacts}>
+            <div className={styles.social}>
+              <Link
+                to="https://www.facebook.com/mtbmaraton"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FacebookIcon className={styles.facebook} />
+              </Link>
+              <Link 
+                to="https://www.instagram.com" 
+                target="_blank" 
+                rel="noopener noreferrer">
+                <InstagramIcon className={styles.instagram} />
+              </Link>
+              <Link 
+                to="https://www.strava.com" 
+                target="_blank" 
+                rel="noopener noreferrer">
+                <StravaIcon className={styles.strava} />
+              </Link>
             </div>
-            <a href="https://www.facebook.com/mtbmaraton" target="_blank"><IconFb/></a>
-            <div className={styles.mailItem}>
-              <p className={styles.name}>Registrácia: Lucia Jánošíková</p>
-              <a className={styles.mailto} target="_blank" href="mailto:luca@stupavskymaraton.sk">
-                luca@stupavskymaraton.sk
-              </a>
-            </div>
+            <ul className={styles.listEmails}>
+              <li className={styles.nameEmail}>
+                <p className={styles.title}>Organizátor:</p>
+                <Link
+                  className={styles.itemText}
+                  href="mailto:inf@stupavskymaraton.sk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  inf@stupavskymaraton.sk
+                </Link>
+              </li>
+              <li className={styles.nameEmail}>
+                <p className={styles.title}>Registrácia:</p>
+                <Link
+                  className={styles.itemText}
+                  href="mailto:luca@stupavskymaraton.sk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  luca@stupavskymaraton.sk
+                </Link>
+              </li>
+            </ul>
           </div>
-          <div className={styles.text}>
-            <div className={styles.column}>
-              <h3 className={styles.columnTitle}>Občianske združenie Maratón</h3>
-              <p className={styles.columnItem}>Štúrova 50</p>
-              <p className={styles.columnItem}>900 33 Marianka</p>
-              <p className={styles.columnItem}>IČO: 36075612</p>
-              <p className={styles.columnItem}>DIČ: 2022156675</p>
-              <p className={styles.columnItem}>Zaregistrované MV SR č.s. VVS/1-900/90-25396</p>
-            </div>
-            <div className={styles.column}>
-              <h3 className={styles.columnTitle}>Štartovné:</h3>
-              <p className={styles.columnItem}>Číslo účtu pre EUR: 360 060 6996/8330</p>
-              <p className={styles.columnItem}>IBAN: SK03 8330 0000 0036 0060 6996</p>
-              <p className={styles.columnItem}>SWIFT / BIC: FIOZSKBAXXX</p>
-              <h3 className={styles.columnTitle}>Príspevky:</h3>
-              <p className={styles.columnItem}>Číslo účtu: 2633076182/1100</p>
-              <p className={styles.columnItem}>IBAN: SK90 1100 0000 0026 3307 6182</p>
-              <p className={styles.columnItem}>SWIFT / BIC: TATRSKBX</p>
-            </div>
-            <div className={styles.column}>
-              <h3 className={styles.columnTitle}>V spolupráci s:</h3>
-              <p className={styles.columnItem}>TROPHY AGENCY s.r.o.</p>
-              <p className={styles.columnItem}>Štúrova 50</p>
-              <p className={styles.columnItem}>IČO: 46011421</p>
-              <p className={styles.columnItem}>IČO DPH: SK2023190499:</p>
-              <p className={styles.columnItem}>DIČ: 2023190499</p>
-              <p className={styles.columnItem}>IBAN: SK15 1100 0000 0029 2085 1624</p>
-              <p className={styles.columnItem}>Č.U: 2920851624/1100</p>
-              
-            </div>
+          <div className={styles.listOrganizers}>
+            <ul className={styles.organizer}>
+              <li>
+                <h3 className={styles.title}>Organizátor:</h3>
+              </li>
+              <li className={styles.itemText}>Bikeservis s.r.o</li>
+              <li className={styles.itemText}>Stupava 821 11</li>
+              <li className={styles.itemText}>Mytna 15D</li>
+              <li className={styles.itemText}>0999 999 999</li>
+              <li className={styles.itemText}>bikeservis@gmail.com</li>
+            </ul>
+            <ul className={styles.organizer}>
+              <li>
+                <h3 className={styles.title}>Občianske združenie Maratón:</h3>
+              </li>
+              <li className={styles.itemText}>Štúrova 50</li>
+              <li className={styles.itemText}>Marianka 900 33</li>
+              <li className={styles.itemText}>IČO: 36075612</li>
+              <li className={styles.itemText}>DIČ: 2022156675</li>
+            </ul>
+            <ul className={styles.organizer}>
+              <li>
+                <h3 className={styles.title}>Štartovné:</h3>
+              </li>
+              <li className={styles.itemText}>Bank of America</li>
+              <li className={styles.itemText}>SWIFT: FIOZSKBAXXX</li>
+              <li className={styles.itemText}>SK03 8330 0000 0036 0060 6996</li>
+            </ul>
           </div>
-        </section>
+        </div>
       </div>
     </footer>
   );
