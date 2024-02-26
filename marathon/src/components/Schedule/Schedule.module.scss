@@ -227,9 +227,10 @@
   }
 }
 
-// TODO: CHECK HOVER ON MOBILE
-// @media (hover: hover) {
+//FOR DESKTOP WITH HOVER EFFECT
+@media (hover: hover) {
   .gridItem {
+    -webkit-tap-highlight-color: transparent;
     &:hover:before {
       transform: scale(1.05);
     }
@@ -284,4 +285,64 @@
       background-position: center 60%;
     }
   }
-// }
+}
+
+//FOR DEVICES DOESN`T SUPPORT HOVER EFFECT
+@media (hover: none) {
+  .gridItem {
+    -webkit-tap-highlight-color: transparent;
+    &:active:before {
+      transform: scale(1.05);
+    }
+
+    &:nth-of-type(5n + 1):active:before {
+      background-image: linear-gradient(
+          127deg,
+          rgba(25, 70, 113, 0.468),
+          rgba(217, 176, 100, 0.289)
+        ),
+        url("../../assets/img/beh.jpg");
+      background-position: center 60%;
+    }
+
+    &:nth-of-type(5n + 2):active:before {
+      background-image: linear-gradient(
+          127deg,
+          rgba(25, 70, 113, 0.468),
+          rgba(217, 176, 100, 0.289)
+        ),
+        url("../../assets/img/vel.jpg");
+      background-position: center 80%;
+    }
+
+    &:nth-of-type(5n + 3):active:before {
+      background-image: linear-gradient(
+          127deg,
+          rgba(25, 70, 113, 0.468),
+          rgba(217, 176, 100, 0.289)
+        ),
+        url("../../assets/img/run2.jpg");
+      background-position: left center;
+    }
+
+    &:nth-of-type(5n + 4):active:before {
+      background-image: linear-gradient(
+          127deg,
+          rgba(25, 70, 113, 0.468),
+          rgba(217, 176, 100, 0.289)
+        ),
+        url("../../assets/img/start-marathon-small2.jpg");
+      background-position: center 30%;
+    }
+
+    &:nth-of-type(5n + 5):active:before {
+      background-image: linear-gradient(
+          127deg,
+          rgba(25, 70, 113, 0.468),
+          rgba(217, 176, 100, 0.289)
+        ),
+        url("../../assets/img/vel1.jpg");
+      background-position: center 60%;
+    }
+  }
+}
