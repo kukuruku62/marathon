@@ -63,19 +63,77 @@
 
 .facebook {
   color: #434752;
+  transition: all 0.3s;
+  -webkit-tap-highlight-color: transparent;
   path {
+    transition: all 0.3s;
     color: #747b90;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: #5d6371;
+
+      path {
+        color: #8f94a3;
+      }
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      color: #5d6371;
+
+      path {
+        color: #8f94a3;
+      }
+    }
   }
 }
 
 .instagram {
   color: #434752;
+  transition: all 0.3s;
+
+  @media (hover: hover) {
+    &:hover {
+      color: #5d6371;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      color: #5d6371;
+    }
+  }
 }
 
 .strava {
   color: #434752;
+  transition: all 0.3s;
+
   path:nth-of-type(1) {
     color: #747b90;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: #5d6371;
+
+      path:nth-of-type(1) {
+        color: #b5bbcd;
+      }
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      color: #5d6371;
+
+      path:nth-of-type(1) {
+        color: #b5bbcd;
+      }
+    }
   }
 }
 
