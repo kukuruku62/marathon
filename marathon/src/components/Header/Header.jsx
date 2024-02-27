@@ -26,8 +26,8 @@ export const Header = () => {
         <div className={styles.inner}>
             <Link to="/" onClick={() => setIsBurgerWindow(false)}>
               <div className={styles.content}>
-                <FlagSvg className={styles.flag} alt="Vlajka" />
-                <h2 className={styles.headerTitle}>STUPAVA MARATÓN</h2>
+                {/* <FlagSvg className={styles.flag} alt="Vlajka" /> */}
+                <h2 className={styles.title}>STUPAVA MARATÓN</h2>
               </div>
             </Link>
         </div>
