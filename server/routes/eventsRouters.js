@@ -1,18 +1,25 @@
 import { Router } from "express";
-import { getAllEvents, getSingleEvent, postEvent, getParticipantsOfEvent, addParticipant } from "../controllers/EventsControllers.js";
-
-
+import {
+  getAllEvents,
+  getSingleEvent,
+  postEvent,
+  getParticipantsOfEvent,
+  addParticipant,
+  getImagesSponsors,
+} from "../controllers/EventsControllers.js";
 
 const router = Router();
 
-router.get("/", getAllEvents)
+router.get("/", getAllEvents);
 
-router.get("/:id", getSingleEvent)
+router.get("/mainsponsors", getImagesSponsors);
 
-router.post("/addEvent", postEvent)
+router.get("/:id", getSingleEvent);
 
-router.get("/:id/participants", getParticipantsOfEvent)
+router.post("/addEvent", postEvent);
 
-router.patch("/:id/registration", addParticipant)
+router.get("/:id/participants", getParticipantsOfEvent);
 
-export {router as eventsRouters}
+router.patch("/:id/registration", addParticipant);
+
+export { router as eventsRouters };
