@@ -5,7 +5,8 @@ export const fetchImagesMainSponsors = createAsyncThunk(
   "imagesMainSponsors/fetchImagesMainSponsors",
   async function (_, thunkAPI) {
     try {
-      const response = await fetch('http://localhost:3002/api/events/mainsponsors');
+      // const response = await fetch('http://localhost:3002/api/events/mainsponsors');
+      const response = await fetch('https://marathon-delta.vercel.app/api/events/mainsponsors');
       const imagesData = await response.json();
       return imagesData;
     } catch (error) {
