@@ -12,7 +12,6 @@ export const Home = () => {
   const dispatch = useDispatch();
   const status = useSelector((state) => state.events.status);
   const listEvents = useSelector((state) => state.events.listEvents);
-  const listMainSponsors = useSelector((state) => state.events.listMainSponsors);
 
   useEffect(() => {
     dispatch(fetchSchedule());
@@ -23,7 +22,7 @@ export const Home = () => {
       <Timer />
       <About />
       <Schedule status={status} listEvents={listEvents} />
-      <Advertising listMainSponsors={listMainSponsors} />
+      <Advertising />
     </>
   );
 };

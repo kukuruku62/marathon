@@ -1,4 +1,6 @@
 import Event from "../models/Event.js";
+import LinksImgSponsors from "../models/LinksImgSponsors.js";
+
 
 export const getAllEvents = async (req, res) => {
   try {
@@ -24,6 +26,20 @@ export const getAllEvents = async (req, res) => {
     res.status(500).send("Server events error");
   }
 };
+
+export const getImagesSponsors = async (req, res) => {
+  try {
+    const linksImg = await LinksImgSponsors.find();
+
+    if(!linksImg) {
+      return res.status(404).json({message: "Images of sponsors doesn't exist"})
+    }
+
+    res.status(200).json(linksImg)
+  } catch (error) {
+    res.status(500).json({message: "Server error search images of sponsors"})
+  }
+}
 
 export const getSingleEvent = async (req, res) => {
   try {
