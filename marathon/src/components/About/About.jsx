@@ -22,9 +22,9 @@ export const About = () => {
             </h1>
           )}
           <p className={styles.description}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores sequi, expedita neque
-            quod consequatur minima voluptas impedit obcaecati veritatis, reprehenderit dolorem
-            quisquam ipsum dolor exercitationem iusto officiis harum ratione accusantium.
+            Stupava Marathon ponúka preteky pre deti aj dospelých v krásnom prostredí Malých Karpát
+            už viac ako 10 rokov. Vyberte si z rôznych tratí a zažite vzrušenie z prekonávania seba
+            samého v úchvatnej prírode.
           </p>
         </div>
         <div className={styles.linksBlock}>
