@@ -1,4 +1,6 @@
 import React from "react";
+import markerIconPng from "leaflet/dist/images/marker-icon.png"
+import {Icon} from 'leaflet'
 
 import { MapContainer, TileLayer, Marker, Tooltip, Polyline } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
@@ -146,7 +148,9 @@ export const MapOfEvent = () => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={[48.2798, 17.0483]}>
+        {/* <Marker position={[48.2798, 17.0483]}> */}
+        <Marker position={[48.2798, 17.0483]} icon={new Icon({iconUrl: markerIconPng, iconSize: [25, 41], iconAnchor: [12, 41]})} >
+
           <Tooltip>Nová 66, 900 31 Stupava Bajkservis Registration</Tooltip>
         </Marker>
         <Marker position={[48.278966, 17.048793]}>
