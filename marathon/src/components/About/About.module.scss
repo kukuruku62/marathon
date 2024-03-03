@@ -46,7 +46,7 @@
   font-family: Roboto;
   font-size: 60px;
   font-weight: 700;
-  color: rgb(255, 255, 255);
+  color: $main-white;
 
   @media (max-width: 1024px) {
     font-size: 48px;
@@ -61,7 +61,7 @@
   font-family: Roboto;
   font-size: 20px;
   font-weight: 400;
-  color: rgb(255, 255, 255);
+  color: $main-white;
 
   @media (max-width: 1024px) {
     font-size: 16px;
@@ -84,7 +84,6 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  // align-items: flex-end;
   gap: 40px;
   width: 100%;
 }
@@ -111,10 +110,10 @@
   justify-content: center;
   padding: 10px 30px;
   border-radius: 10px;
-  border: 1px solid rgb(238, 28, 37);
-  background-color: rgb(238, 28, 37);
+  border: 1px solid $links-btns-red;
+  background-color: $links-btns-red;
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: $main-white;
   transition: all 0.2s;
   box-shadow:
     0 1px 1px rgba(0, 0, 0, 0.08),
@@ -128,7 +127,7 @@
 
 @media (any-hover: hover) {
   .link:hover {
-    background-color: rgb(187, 0, 9);
-    border: 1px solid rgb(187, 0, 9);
+    background-color: $links-btns-red-hover;
+    border: 1px solid $links-btns-red-hover;
   }
 }

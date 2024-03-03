@@ -1,13 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { useSelector } from "react-redux";
 import { Skeleton } from "../Skeleton/Skeleton";
 import { SkeletonBike } from "../SkeletonBike/SkeletonBike";
-
 import styles from "./Schedule.module.scss";
 
 
-export const Schedule = ({ status, listEvents }) => {
+
+export const Schedule = () => {
+  const status = useSelector((state) => state.events.status);
+  const listEvents = useSelector((state) => state.events.listEvents);
+
   return (
     <section>
       <h2 className={styles.title}>ROZVRH</h2>

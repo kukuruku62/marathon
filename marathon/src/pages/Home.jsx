@@ -21,7 +21,7 @@ export const Home = () => {
     <>
       <Timer />
       <About />
-      <Schedule status={status} listEvents={listEvents} />
+      <Schedule />
       <Advertising />
     </>
   );
