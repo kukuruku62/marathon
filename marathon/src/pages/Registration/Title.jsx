@@ -4,7 +4,6 @@ import styles from "./Registration.module.scss";
 export const Title = ({name, dateOfEvent, timeOfStartEvent, type}) => {
   return (
     <article className={styles.titlesList}>
-    <h1 className={styles.title}>Registrácia a plat'ba</h1>
     <div className={styles.listDescroptionEvent}>
       <h2 className={styles.subtitle}>{name}</h2>
       <ul>

@@ -1,5 +1,5 @@
 .footer {
-  background-color: rgb(31, 38, 47);
+  background-color: $footer-background;
   margin-top: auto;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .facebook {
-  color: #434752;
+  color: $footer-icons;
   transition: all 0.3s;
   -webkit-tap-highlight-color: transparent;
   path {
@@ -72,7 +72,7 @@
 
   @media (hover: hover) {
     &:hover {
-      color: #5d6371;
+      color: $footer-icons-hover-active;
 
       path {
         color: #8f94a3;
@@ -82,7 +82,7 @@
 
   @media (hover: none) {
     &:active {
-      color: #5d6371;
+      color: $footer-icons-hover-active;
 
       path {
         color: #8f94a3;
@@ -92,24 +92,24 @@
 }
 
 .instagram {
-  color: #434752;
+  color: $footer-icons;
   transition: all 0.3s;
 
   @media (hover: hover) {
     &:hover {
-      color: #5d6371;
+      color: $footer-icons-hover-active;
     }
   }
 
   @media (hover: none) {
     &:active {
-      color: #5d6371;
+      color: $footer-icons-hover-active;
     }
   }
 }
 
 .strava {
-  color: #434752;
+  color: $footer-icons;
   transition: all 0.3s;
 
   path:nth-of-type(1) {
@@ -118,7 +118,7 @@
 
   @media (hover: hover) {
     &:hover {
-      color: #5d6371;
+      color: $footer-icons-hover-active;
 
       path:nth-of-type(1) {
         color: #b5bbcd;
@@ -128,7 +128,7 @@
 
   @media (hover: none) {
     &:active {
-      color: #5d6371;
+      color: $footer-icons-hover-active;
 
       path:nth-of-type(1) {
         color: #b5bbcd;
@@ -186,14 +186,14 @@
 
 .title {
   font-size: 24px;
-  color: #3c4d60;
+  color: $footer-titles;
   margin-bottom: 10px;
 }
 
 .itemText {
   font-size: 16px;
   font-weight: 400;
-  color: #9098a4;
+  color: $footer-text;
 }
 
 .listOrganizers {

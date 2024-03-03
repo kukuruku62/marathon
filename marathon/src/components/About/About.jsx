@@ -17,9 +17,9 @@ export const About = () => {
       <div className={styles.wrapper}>
         <div className={styles.textContainer}>
           {firstEvent && dateOfNextEvent && (
-            <h1 className={styles.title}>
+            <h2 className={styles.title}>
               {`${firstEvent.name} ${dateOfNextEvent} ${firstEvent.timeOfStartEvent} `}
-            </h1>
+            </h2>
           )}
           <p className={styles.description}>
             Stupava Marathon ponúka preteky pre deti aj dospelých v krásnom prostredí Malých Karpát

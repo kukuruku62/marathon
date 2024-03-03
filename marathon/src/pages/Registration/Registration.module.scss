@@ -42,7 +42,7 @@
   font-weight: 500;
   text-align: center;
   margin: 10px auto;
-  color: rgba(39, 58, 98, 0.863);
+  color: $links-btns-blue;
 
   @media (max-width: 580px) {
     font-size: 32px;
@@ -54,12 +54,12 @@
   font-weight: 500;
   text-align: center;
   margin-bottom: 10px;
-  color: rgba(39, 58, 98, 0.863);
+  color: $links-btns-blue;
   text-transform: uppercase;
 }
 
 .textError {
-  color: #bc3b4f;
+  color: $form-message-error;
   font-size: 14px;
   &::before {
     display: inline;
@@ -84,7 +84,7 @@
 
   h4 {
     align-self: center;
-    color: #8f1a2b;
+    color: $form-note;
     font-weight: 400;
     
     @media (max-width: 580px) {
@@ -102,7 +102,7 @@
 
 .inputSubmit {
   border-radius: 4px;
-  background: rgba(239, 51, 63);
+  background: $links-btns-red;
   color: white;
   text-transform: uppercase;
   border: none;
@@ -114,11 +114,11 @@
 
   &:hover {
     transition: 0.2s all;
-    background: rgb(182, 35, 44);
+    background: $links-btns-red-hover;
   }
 
   &:disabled {
-    background: rgba(239, 51, 63, 0.685);
+    background: $form-btn-disabled;
   }
 }
 
@@ -144,7 +144,7 @@
     display: flex;
     column-gap: 5px;
     align-items: baseline;
-    color: rgba(39, 58, 98, 0.863);
+    color: $links-btns-blue;
     font-size: large;
 
     h3 {
