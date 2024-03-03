@@ -32,6 +32,7 @@ export const Registration = () => {
 
   return (
     <section className={styles.wrapper}>
+      <h2 className={styles.title}>Registrácia a plat'ba</h2>
       {status === "loading" && <SkeletonBike />}
       {status === "resolved" && <Title name={name} dateOfEvent={dateOfEvent} timeOfStartEvent={timeOfStartEvent} type={type}/>}
       <article className={styles.container}>

@@ -6,7 +6,6 @@ import { SkeletonBike } from "../SkeletonBike/SkeletonBike";
 import styles from "./Schedule.module.scss";
 
 
-
 export const Schedule = () => {
   const status = useSelector((state) => state.events.status);
   const listEvents = useSelector((state) => state.events.listEvents);
