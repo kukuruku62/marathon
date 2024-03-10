@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addParticipant } from "../../redux/listEventsSlice";
+import { addParticipant } from "../../redux/participantSlice";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
 import { useGetSingleEventQuery } from "../../redux/api";
@@ -10,23 +10,20 @@ import { Title } from "./Title";
 
 import styles from "./Registration.module.scss";
 
-
 export const Registration = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
-  const {data, isLoading, isSuccess} = useGetSingleEventQuery(id);
-  const { _id, name, type, dateOfEvent, timeOfStartEvent, distances, measurement } = {...data};
+  const { data, isLoading, isSuccess } = useGetSingleEventQuery(id);
+  const { _id, name, type, dateOfEvent, timeOfStartEvent, distances, measurement } = { ...data };
   const registeredParticipant = useSelector((state) => state.events.registeredParticipant);
   const formatedDate = new Date(dateOfEvent).toLocaleDateString();
-  
 
   useEffect(() => {
     return () => {
-      dispatch(addParticipant(null))
-    }
-  }, [dispatch])
+      dispatch(addParticipant(null));
+    };
+  }, [dispatch]);
 
-  
   const {
     register,
     formState: { errors, isValid },
@@ -43,7 +40,14 @@ export const Registration = () => {
     <section className={styles.wrapper}>
       <h2 className={styles.title}>Registrácia a plat'ba</h2>
       {isLoading && <SkeletonBike />}
-      {isSuccess && <Title name={name} dateOfEvent={formatedDate} timeOfStartEvent={timeOfStartEvent} type={type}/>}
+      {isSuccess && (
+        <Title
+          name={name}
+          dateOfEvent={formatedDate}
+          timeOfStartEvent={timeOfStartEvent}
+          type={type}
+        />
+      )}
       <article className={styles.container}>
         {!registeredParticipant && (
           <form className={styles.formWrapper} onSubmit={handleSubmit(submit)}>
