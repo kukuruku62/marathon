@@ -46,8 +46,7 @@ export const createCheckout = async (req, res) => {
           quantity: 1,
         },
       ],
-      // return_url: "http://localhost:5173/payment/return?session_id={CHECKOUT_SESSION_ID}",
-      return_url: "https://marathon-front.vercel.app/payment/return?session_id={CHECKOUT_SESSION_ID}",
+      return_url: process.env.REACT_APP_STRIPE_RETURN_URL,
       automatic_tax: { enabled: false },
     });
     res.send({ clientSecret: session.client_secret });
