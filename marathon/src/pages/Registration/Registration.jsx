@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addParticipant } from "../../redux/listEventsSlice";
+import { addParticipant } from "../../redux/participantSlice";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
 import { useGetSingleEventQuery } from "../../redux/api";
@@ -14,17 +14,17 @@ import styles from "./Registration.module.scss";
 export const Registration = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
-  const {data, isLoading, isSuccess} = useGetSingleEventQuery(id);
-  const { _id, name, type, dateOfEvent, timeOfStartEvent, distances, measurement } = {...data};
+  const { data, isLoading, isSuccess } = useGetSingleEventQuery(id);
+  const { _id, name, type, dateOfEvent, timeOfStartEvent, distances, measurement } = { ...data };
   const registeredParticipant = useSelector((state) => state.events.registeredParticipant);
   const formatedDate = new Date(dateOfEvent).toLocaleDateString();
-  
 
   useEffect(() => {
     return () => {
-      dispatch(addParticipant(null))
-    }
-  }, [dispatch])
+      dispatch(addParticipant(null));
+    };
+  }, [dispatch]);
+
 
   
   const {
