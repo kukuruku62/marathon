@@ -1,11 +1,23 @@
 import React from "react";
-import styles from "./About.module.scss";
-import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { useGetAllEventsQuery } from "../../redux/api";
+import styles from "./About.module.scss";
 
 export const About = () => {
-  const firstEvent = useSelector((state) => state.events.firstEvent);
-  const dateOfNextEvent = useSelector((state) => state.events.dateOfNextEvent);
+  const { data, isSuccess, isError } = useGetAllEventsQuery(undefined, {
+    selectFromResult: (result) => ({
+      isSuccess: result?.isSuccess,
+      isError: result?.isError,
+      data: result?.data?.eventsData?.[0],
+    }),
+  });
+  
+  const { name, timeOfStartEvent, dateOfEvent } = { ...data };
+
+  let formatedDate;
+  if (isSuccess) {
+    formatedDate = new Date(dateOfEvent).toLocaleDateString();
+  }
 
   const listItemsMenu = [
     { title: "Podporte nás", href: "/donate" },
@@ -16,10 +28,8 @@ export const About = () => {
     <section className={styles.slider}>
       <div className={styles.wrapper}>
         <div className={styles.textContainer}>
-          {firstEvent && dateOfNextEvent && (
-            <h2 className={styles.title}>
-              {`${firstEvent.name} ${dateOfNextEvent} ${firstEvent.timeOfStartEvent} `}
-            </h2>
+          {isSuccess && formatedDate && (
+            <h2 className={styles.title}>{`${name} ${formatedDate} ${timeOfStartEvent}`}</h2>
           )}
           <p className={styles.description}>
             Stupava Marathon ponúka preteky pre deti aj dospelých v krásnom prostredí Malých Karpát

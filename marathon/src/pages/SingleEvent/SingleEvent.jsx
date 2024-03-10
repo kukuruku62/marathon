@@ -1,19 +1,18 @@
-import React from "react";
 import { useParams, Link } from "react-router-dom";
-import styles from "./SingleEvent.module.scss";
-
+import { useGetSingleEventQuery } from "../../redux/api.js";
 import { MapOfEvent } from "../../components/MapOfEvent/MapOfEvent";
-import { useSingleEvent } from "../../hooks/useSingleEvent";
 import { Sponsors } from "./Sponsors.jsx";
 import { Item } from "./Item.jsx";
 import { Categories } from "./Categories.jsx";
 import { SkeletonBike } from "../../components/SkeletonBike/SkeletonBike.jsx";
 import { Price } from "./Price.jsx";
+import styles from "./SingleEvent.module.scss";
+
 
 export const SingleEvent = () => {
   const { id } = useParams();
+  const { data, isSuccess, isLoading} = useGetSingleEventQuery(id);
   const {
-    status,
     _id,
     name,
     place,
@@ -34,20 +33,20 @@ export const SingleEvent = () => {
     categoriesMale,
     sponsorsEvent,
     addTimeStartEvent,
-  } = useSingleEvent(id);
+  } = { ...data };
+
 
   //ПРОВЕРИТЬ ЕСЛИ ДАННЫЕ БУДУТ ПУСТЫМИ
 
   return (
     <section className={styles.wrapper}>
-      {status === "loading" && <SkeletonBike />}
-      {status === "resolved" && (
+      {isLoading && <SkeletonBike />}
+      {isSuccess && (
         <>
           <div className={styles.content}>
             <h2 className={styles.title}>{name}</h2>
             <Link to={`/events/${_id}/registration`} className={styles.linkRegistration}>
-              {" "}
-              Registrácia{" "}
+              Registrácia
             </Link>
 
             {sponsorsEvent && <Sponsors sponsorsEvent={sponsorsEvent} />}

@@ -1,23 +1,30 @@
-import React from "react";
 import { useParams } from "react-router-dom";
-
+import { useGetSingleEventQuery } from "../../redux/api";
 import { SkeletonBike } from "../../components/SkeletonBike/SkeletonBike";
 import SmileIcon from "../../assets/svg/smile.svg?react";
-import { useSingleEvent } from "../../hooks/useSingleEvent";
-
 import styles from "./Participants.module.scss";
 
 
 export const Participants = () => {
   const { id } = useParams();
-  const { name, participants, status } = useSingleEvent(id);
+  const { data, isSuccess, isLoading} = useGetSingleEventQuery(id, {
+    selectFromResult: (result) => ({
+      isSuccess: result?.isSuccess,
+      isLoading: result?.isLoading,
+      data: {
+        participants: result?.data?.participants,
+        name: result?.data?.name
+      }
+    })
+  });
+  const {name, participants} = {...data};
 
-  // TODO: ADD CASE ERROR!!!!!!!!!!!!!!!
+
   return (
     <section className={styles.wrapper}>
       <div className={styles.inner}>
-        {status === "loading" && <SkeletonBike/>}
-        {status === "resolved" && 
+        {isLoading && <SkeletonBike/>}
+        {isSuccess && 
           <>
             <h2 className={styles.title}>{name}</h2>
             {participants.length === 0 && 

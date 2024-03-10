@@ -1,26 +1,27 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchImagesMainSponsors } from "../../redux/mainSponsorsSlice.js";
+import { useGetAllEventsQuery } from "../../redux/api";
 import styles from "./Advertising.module.scss";
 
-export const Advertising = () => {
-  const dispatch = useDispatch();
-  const fetchStatus = useSelector((state) => state.imagesSponsors.fetchStatus);
-  const arrImages = useSelector((state) => state.imagesSponsors.arrImages);
 
-  useEffect(() => {
-    dispatch(fetchImagesMainSponsors());
-  }, [dispatch]);
+export const Advertising = () => {
+
+  const {data, isSuccess} = useGetAllEventsQuery(undefined, {
+    selectFromResult: (result) => ({
+      isSuccess: result?.isSuccess,
+      data: result?.data?.advertisingData
+    })
+  });
+
 
   return (
     <>
-      {fetchStatus === "resolved" && arrImages.length > 0 && (
+      {isSuccess && (
         <section className={styles.wrapper}>
           <div className={styles.inner}>
             <h2 className={styles.title}>Sponsors and partners:</h2>
              <ul className={styles.advertising}>
-              { arrImages.map(({_id, linkImage, linkSite}) => 
+              { data.map(({_id, linkImage, linkSite}) => 
                 <li key={_id}>
                   <Link to={linkSite} target="_blank" rel="noopener noreferrer">
                     <img className={styles.sponsorImg} src={linkImage} alt="Picture of the sponsor" />

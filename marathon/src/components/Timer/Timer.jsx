@@ -1,13 +1,22 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import { useTimer } from "../../hooks/useTimer";
-
+import { useGetAllEventsQuery } from "../../redux/api";
 import styles from "./Timer.module.scss";
 
 
 export const Timer = () => {
-  const dateAndTimeFirstEvent = useSelector((state) => state.events.dateAndTimeFirstEvent);
-  const { timerDays, timerHours, timerMinutes, isReady } = useTimer(dateAndTimeFirstEvent);
+
+  const {data, isSuccess} = useGetAllEventsQuery(undefined, {
+    selectFromResult: (result) => ({
+      isSuccess: result?.isSuccess,
+      data: result?.data?.eventsData?.[0]
+    })
+  });
+
+  const { timerDays, timerHours, timerMinutes, isReady } = useTimer(
+    isSuccess && data ? `${data.dateOfEvent} ${data.timeOfStartEvent}` : null
+  );
+
 
   return (
     <div className={styles.wrapper}>

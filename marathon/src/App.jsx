@@ -7,7 +7,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./index.css";
-import { Home } from "./pages/Home.jsx";
+import { Home } from "./pages/Home/Home.jsx";
 import { Layout } from "./components/Layout/Layout.jsx";
 import { ErrorPage } from "./pages/ErrorPage/ErrorPage.jsx";
 import { SingleEvent } from "./pages/SingleEvent/SingleEvent.jsx";
