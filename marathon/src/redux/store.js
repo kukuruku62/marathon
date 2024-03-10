@@ -1,11 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import eventsSliceReducer from "./listEventsSlice";
-import imagesMainSponsorsSlice from "./mainSponsorsSlice"
-
+import { eventsAPI } from "./api";
 
 export const store = configureStore({
   reducer: {
     events: eventsSliceReducer,
-    imagesSponsors: imagesMainSponsorsSlice,
+    [eventsAPI.reducerPath]: eventsAPI.reducer,
   },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(eventsAPI.middleware),
 });

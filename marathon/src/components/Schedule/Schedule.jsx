@@ -1,22 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useGetAllEventsQuery } from "../../redux/api";
 import { Skeleton } from "../Skeleton/Skeleton";
 import { SkeletonBike } from "../SkeletonBike/SkeletonBike";
 import styles from "./Schedule.module.scss";
 
 
 export const Schedule = () => {
-  const status = useSelector((state) => state.events.status);
-  const listEvents = useSelector((state) => state.events.listEvents);
+  const {data, isSuccess, isError, isLoading} = useGetAllEventsQuery(undefined, {
+    selectFromResult: (result) => ({
+      isSuccess: result?.isSuccess,
+      isLoading: result?.isLoading,
+      data: result?.data?.eventsData
+    })
+  });
+
 
   return (
     <section>
       <h2 className={styles.title}>ROZVRH</h2>
       <ul className={styles.wrapper}>
-        {status === "loading" && <SkeletonBike />}
 
-        {listEvents && listEvents.map(({ _id, name, dateOfEvent, timeOfStartEvent, distances, measurement }) => (
+        {isLoading && <SkeletonBike />}
+
+        {isSuccess && data.map(({ _id, name, dateOfEvent, timeOfStartEvent, distances, measurement }) => (
           <li key={_id} className={styles.gridItem}>
             <Link to={`/events/${_id}`}>
               <article className={styles.content}>
@@ -39,7 +46,8 @@ export const Schedule = () => {
         ))}
       </ul>
 
-      {status === "rejected" && <Skeleton message={"Error:( Please, try again."} />}
+      {isError && <Skeleton message={"Error:( Please, try again."} />}
+
     </section>
   );
 };

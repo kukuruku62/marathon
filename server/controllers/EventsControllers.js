@@ -1,6 +1,6 @@
+import { sortArrayOfEventsByDateAndTime } from "../helpers/sortArrayByParams.js";
 import Event from "../models/Event.js";
 import LinksImgSponsors from "../models/LinksImgSponsors.js";
-
 
 export const getAllEvents = async (req, res) => {
   try {
@@ -15,13 +15,18 @@ export const getAllEvents = async (req, res) => {
       "measurement",
     ]);
 
-    const filteredEventsByCurrentDate = listEvents.filter((event) => Date.parse(event.dateOfEvent + " " + event.timeOfStartEvent) >= Date.now());
+    const filteredAndSortedListEvents = listEvents
+      .filter((event) => Date.parse(event.dateOfEvent + " " + event.timeOfStartEvent) >= Date.now())
+      .sort(sortArrayOfEventsByDateAndTime);
 
-    if (filteredEventsByCurrentDate.length === 0) {
+    Array.isArray(filteredAndSortedListEvents) ? filteredAndSortedListEvents : [filteredAndSortedListEvents]
+    // If there is only one event in the database, it will be returned as an object. Processing data on the frontend takes an array.
+
+    if (filteredAndSortedListEvents.length === 0) {
       return res.status(404).send("Events not found");
     }
 
-    res.status(200).json(filteredEventsByCurrentDate);
+    res.status(200).json(filteredAndSortedListEvents);
   } catch (error) {
     res.status(500).send("Server events error");
   }
@@ -31,35 +36,32 @@ export const getImagesSponsors = async (req, res) => {
   try {
     const linksImg = await LinksImgSponsors.find();
 
-    if(!linksImg) {
-      return res.status(404).json({message: "Images of sponsors doesn't exist"})
+    if (!linksImg) {
+      return res.status(404).json({ message: "Images of sponsors doesn't exist" });
     }
 
-    res.status(200).json(linksImg)
+    res.status(200).json(linksImg);
   } catch (error) {
-    res.status(500).json({message: "Server error search images of sponsors"})
+    res.status(500).json({ message: "Server error search images of sponsors" });
   }
-}
+};
 
 export const getSingleEvent = async (req, res) => {
   try {
+    const idEvent = req.params.id;
 
-    const idEvent = req.params.id
-    
-    const requiredEvent = await Event.findById({_id: idEvent}).select(["-participants.email"])
+    const requiredEvent = await Event.findById({ _id: idEvent }).select(["-participants.email"]);
 
-    res.status(200).json(requiredEvent)
+    res.status(200).json(requiredEvent);
 
     if (!requiredEvent) {
       return res.status(404).json({ message: "Maratón neexistuje" });
     }
-
-    
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Server error search single event by id" });
   }
-}
+};
 
 export const addParticipant = async (req, res) => {
   try {
@@ -77,14 +79,14 @@ export const addParticipant = async (req, res) => {
             age,
             email,
             gender,
-            distance
+            distance,
           },
         },
       },
       { new: true }
     );
 
-    res.json({message: "New participant is added"});
+    res.json({ message: "New participant is added" });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Server error addParticipant" });
@@ -153,7 +155,7 @@ export const getParticipantsOfEvent = async (req, res) => {
   try {
     const eventId = req.params.id;
 
-    const requiredEvent = await Event.findById({_id: eventId});
+    const requiredEvent = await Event.findById({ _id: eventId });
 
     if (!requiredEvent) {
       return res.status(404).json({ message: "Maratón neexistuje" });

@@ -14,8 +14,7 @@ export const Return = () => {
     const urlParams = new URLSearchParams(queryString);
     const sessionId = urlParams.get("session_id");
 
-    fetch(`https://marathon-delta.vercel.app/api/stripe/session-status?session_id=${sessionId}`)
-    // fetch(`http://localhost:3002/api/stripe/session-status?session_id=${sessionId}`)
+    fetch(`${import.meta.env.VITE_STRIPE_RETURN_SESSION}=${sessionId}`)
       .then((res) => res.json())
       .then((data) => {
         setStatus(data.status);

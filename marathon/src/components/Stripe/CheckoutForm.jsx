@@ -4,17 +4,14 @@ import { useSelector } from "react-redux";
 import { EmbeddedCheckoutProvider, EmbeddedCheckout } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 
-const stripePromise = loadStripe(
-  "pk_test_51OdBLyChoV7wOHwcTxOxVlZnBTreYosfcuhsdgCF5O5qPN7IM1PX4qENPRV35xA2ide5ld7q29q404MZuBQzjjzU00SNON6zN9"
-);
+const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
 
 export const CheckoutForm = () => {
   const participant = useSelector((state) => state.events.registeredParticipant);
   const [clientSecret, setClientSecret] = useState("");
 
   useEffect(() => {
-    fetch("https://marathon-delta.vercel.app/api/stripe/create-checkout-session", {
-      // fetch("http://localhost:3002/api/stripe/create-checkout-session", {
+    fetch(import.meta.env.VITE_STRIPE_CHECKOUT_SESSION, {
       
       method: "POST",
       headers: {

@@ -1,23 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addParticipant } from "../../redux/listEventsSlice";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
-
-import { useSingleEvent } from "../../hooks/useSingleEvent";
+import { useGetSingleEventQuery } from "../../redux/api";
 import { CheckoutForm } from "../../components/Stripe/CheckoutForm";
 import { SkeletonBike } from "../../components/SkeletonBike/SkeletonBike";
 import { Title } from "./Title";
 
 import styles from "./Registration.module.scss";
 
+
 export const Registration = () => {
   const dispatch = useDispatch();
-  const participant = useSelector((state) => state.events.registeredParticipant);
-
   const { id } = useParams();
-  const { status, _id, name, type, dateOfEvent, timeOfStartEvent, distances, measurement } = useSingleEvent(id);
+  const {data, isLoading, isSuccess} = useGetSingleEventQuery(id);
+  const { _id, name, type, dateOfEvent, timeOfStartEvent, distances, measurement } = {...data};
+  const registeredParticipant = useSelector((state) => state.events.registeredParticipant);
+  const formatedDate = new Date(dateOfEvent).toLocaleDateString();
+  
 
+  useEffect(() => {
+    return () => {
+      dispatch(addParticipant(null))
+    }
+  }, [dispatch])
+
+  
   const {
     register,
     formState: { errors, isValid },
@@ -33,10 +42,10 @@ export const Registration = () => {
   return (
     <section className={styles.wrapper}>
       <h2 className={styles.title}>Registrácia a plat'ba</h2>
-      {status === "loading" && <SkeletonBike />}
-      {status === "resolved" && <Title name={name} dateOfEvent={dateOfEvent} timeOfStartEvent={timeOfStartEvent} type={type}/>}
+      {isLoading && <SkeletonBike />}
+      {isSuccess && <Title name={name} dateOfEvent={formatedDate} timeOfStartEvent={timeOfStartEvent} type={type}/>}
       <article className={styles.container}>
-        {!participant && (
+        {!registeredParticipant && (
           <form className={styles.formWrapper} onSubmit={handleSubmit(submit)}>
             <h4>*Po vyplnení a odoslaní formulára budete presmerovaní na platobnú stránku.</h4>
             <div>
@@ -191,7 +200,7 @@ export const Registration = () => {
             />
           </form>
         )}
-        {participant && <CheckoutForm />}
+        {registeredParticipant && <CheckoutForm />}
       </article>
     </section>
   );

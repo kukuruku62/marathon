@@ -20,7 +20,7 @@ export const useTimer = ( dateAndTimeFirstEvent ) => {
   const startTimer = () => {
     const countdownDate = new Date(dateAndTimeFirstEvent).getTime();
 
-    interval = setTimeout(() => {
+    interval = setInterval(() => {
       const currentTime = new Date().getTime();
       const differenceOfTime = countdownDate - currentTime;
 
