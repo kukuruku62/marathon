@@ -36,7 +36,7 @@
           $gradient-cards-schedule-blue,
           $gradient-cards-schedule-bejge
         ),
-        url("../../assets/img/beh.jpg");
+        url("../../assets/img/beh.webp");
       background-position: center 60%;
     }
   }
@@ -48,7 +48,7 @@
           $gradient-cards-schedule-blue,
           $gradient-cards-schedule-bejge
         ),
-        url("../../assets/img/vel.jpg");
+        url("../../assets/img/vel.webp");
       background-position: center 80%;
     }
   }
@@ -60,7 +60,7 @@
           $gradient-cards-schedule-blue,
           $gradient-cards-schedule-bejge
         ),
-        url("../../assets/img/run2.jpg");
+        url("../../assets/img/run2.webp");
       background-position: left center;
     }
   }
@@ -72,7 +72,7 @@
           $gradient-cards-schedule-blue,
           $gradient-cards-schedule-bejge
         ),
-        url("../../assets/img/start-marathon-small2.jpg");
+        url("../../assets/img/start-marathon-small2.webp");
       background-position: center 30%;
     }
   }
@@ -84,7 +84,7 @@
           $gradient-cards-schedule-blue,
           $gradient-cards-schedule-bejge
         ),
-        url("../../assets/img/vel1.jpg");
+        url("../../assets/img/vel1.webp");
       background-position: center 60%;
     }
   }
@@ -184,7 +184,6 @@
   justify-content: center;
   width: calc((100% - 10%) / 3);
 
-
   @media (max-width: 1200px) {
     width: 100%;
     order: 1;
@@ -222,7 +221,6 @@
   align-items: flex-end;
   width: calc((100% - 10%) / 3);
 
-
   @media (max-width: 1200px) {
     width: 100%;
     flex-direction: row;
@@ -245,7 +243,7 @@
           $gradient-cards-schedule-blue-hover-active,
           $gradient-cards-schedule-bejge-hover-active
         ),
-        url("../../assets/img/beh.jpg");
+        url("../../assets/img/beh.webp");
       background-position: center 60%;
     }
 
@@ -255,7 +253,7 @@
           $gradient-cards-schedule-blue-hover-active,
           $gradient-cards-schedule-bejge-hover-active
         ),
-        url("../../assets/img/vel.jpg");
+        url("../../assets/img/vel.webp");
       background-position: center 80%;
     }
 
@@ -265,7 +263,7 @@
           $gradient-cards-schedule-blue-hover-active,
           $gradient-cards-schedule-bejge-hover-active
         ),
-        url("../../assets/img/run2.jpg");
+        url("../../assets/img/run2.webp");
       background-position: left center;
     }
 
@@ -275,7 +273,7 @@
           $gradient-cards-schedule-blue-hover-active,
           $gradient-cards-schedule-bejge-hover-active
         ),
-        url("../../assets/img/start-marathon-small2.jpg");
+        url("../../assets/img/start-marathon-small2.webp");
       background-position: center 30%;
     }
 
@@ -285,7 +283,7 @@
           $gradient-cards-schedule-blue-hover-active,
           $gradient-cards-schedule-bejge-hover-active
         ),
-        url("../../assets/img/vel1.jpg");
+        url("../../assets/img/vel1.webp");
       background-position: center 60%;
     }
   }
@@ -305,7 +303,7 @@
           $gradient-cards-schedule-blue-hover-active,
           $gradient-cards-schedule-bejge-hover-active
         ),
-        url("../../assets/img/beh.jpg");
+        url("../../assets/img/beh.webp");
       background-position: center 60%;
     }
 
@@ -315,7 +313,7 @@
           $gradient-cards-schedule-blue-hover-active,
           $gradient-cards-schedule-bejge-hover-active
         ),
-        url("../../assets/img/vel.jpg");
+        url("../../assets/img/vel.webp");
       background-position: center 80%;
     }
 
@@ -325,7 +323,7 @@
           $gradient-cards-schedule-blue-hover-active,
           $gradient-cards-schedule-bejge-hover-active
         ),
-        url("../../assets/img/run2.jpg");
+        url("../../assets/img/run2.webp");
       background-position: left center;
     }
 
@@ -335,7 +333,7 @@
           $gradient-cards-schedule-blue-hover-active,
           $gradient-cards-schedule-bejge-hover-active
         ),
-        url("../../assets/img/start-marathon-small2.jpg");
+        url("../../assets/img/start-marathon-small2.webp");
       background-position: center 30%;
     }
 
@@ -345,7 +343,7 @@
           $gradient-cards-schedule-blue-hover-active,
           $gradient-cards-schedule-bejge-hover-active
         ),
-        url("../../assets/img/vel1.jpg");
+        url("../../assets/img/vel1.webp");
       background-position: center 60%;
     }
   }
