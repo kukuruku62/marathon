@@ -10,6 +10,7 @@ import { Title } from "./Title";
 
 import styles from "./Registration.module.scss";
 
+
 export const Registration = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
@@ -23,7 +24,7 @@ export const Registration = () => {
       dispatch(addParticipant(null));
     };
   }, [dispatch]);
-
+  
   const {
     register,
     formState: { errors, isValid },
