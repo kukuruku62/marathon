@@ -24,8 +24,6 @@ export const Registration = () => {
       dispatch(addParticipant(null));
     };
   }, [dispatch]);
-
-
   
   const {
     register,
@@ -43,7 +41,14 @@ export const Registration = () => {
     <section className={styles.wrapper}>
       <h2 className={styles.title}>Registrácia a plat'ba</h2>
       {isLoading && <SkeletonBike />}
-      {isSuccess && <Title name={name} dateOfEvent={formatedDate} timeOfStartEvent={timeOfStartEvent} type={type}/>}
+      {isSuccess && (
+        <Title
+          name={name}
+          dateOfEvent={formatedDate}
+          timeOfStartEvent={timeOfStartEvent}
+          type={type}
+        />
+      )}
       <article className={styles.container}>
         {!registeredParticipant && (
           <form className={styles.formWrapper} onSubmit={handleSubmit(submit)}>
